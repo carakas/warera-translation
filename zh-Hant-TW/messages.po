@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: zh-TW\n"
-"Project-Id-Version: 1.0.3\n"
+"Project-Id-Version: 1.0.4\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: \n"
 "Last-Translator: patrick0980625\n"
@@ -77,6 +77,11 @@ msgstr "（成員平均發展度）"
 msgid "(own development)"
 msgstr "（個人發展度）"
 
+#. placeholder {0}: Math.max(items.length, 1)
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:327
+msgid "{0, plural, one {Put on sale} other {Put # items on sale}}"
+msgstr "{0, plural, one {放在販賣} other {放 # 物品在販賣}}"
+
 #. placeholder {0}: myCountry?.name
 #: src/components/_military/battle/EndedBattlesList.tsx:81
 msgid "{0} & allies"
@@ -90,7 +95,7 @@ msgstr "需要 {0} 位活躍公民"
 #. placeholder {0}: formatKm(homeDistanceKm)
 #: src/components/_layout/LayoutMapUserMenu.tsx:151
 msgid "{0} away"
-msgstr ""
+msgstr "距離 {0}"
 
 #. placeholder {0}: data.userId && ( <UserUsername userId={data.userId} withAvatar withFlag /> )
 #: src/components/_user/notification/notification.frontConfig.tsx:488
@@ -144,7 +149,7 @@ msgstr "{0}/{1} 啟用"
 #. placeholder {0}: userMapLootConfig.lootChancePercent
 #: src/components/_layout/LayoutMapUserMenu.tsx:240
 msgid "{0}% base chance, plus your Luck skill"
-msgstr ""
+msgstr "{0}% 基礎機率，加上你的幸運點數"
 
 #. placeholder {0}: companyCountry.taxes.income
 #: src/components/_economy/company/CompanyTags.tsx:50
@@ -161,7 +166,7 @@ msgstr "會從你給員工的薪資中扣除 {0}% 所得稅"
 msgid "{0}% of invested"
 msgstr "投資的 {0}%"
 
-#: src/components/_user/mission/MissionsList.tsx:235
+#: src/components/_user/mission/MissionsList.tsx:250
 msgid "{completedCount}/{totalCount} completed"
 msgstr "{completedCount}/{totalCount} 已完成"
 
@@ -169,14 +174,22 @@ msgstr "{completedCount}/{totalCount} 已完成"
 msgid "{draftPrestigeCount} prestige point(s) on this skill ({savedPrestigeCount} saved, locked until reset)"
 msgstr "{draftPrestigeCount} 聲望點數在此技能（{savedPrestigeCount} 已儲存，鎖定直到重置）"
 
+#: src/components/_economy/inventory/DismantleModal.tsx:196
+msgid "{equippedCount, plural, one {# of them is equipped} other {# of them are equipped}}"
+msgstr "{equippedCount, plural, one {# 之一已裝備} other {# 之中已裝備}}"
+
 #: src/components/_user/user/Level.tsx:126
 msgid "{nextLevelSkillPoints} Skill Points"
-msgstr ""
+msgstr "{nextLevelSkillPoints} 技能點數"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:187
+msgid "{rareCount, plural, one {# of them is rare or better} other {# of them are rare or better}}"
+msgstr "{rareCount, plural, one {# 之一更稀有或更好} other {# 之中更稀有或更好}}"
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:167
 #: src/components/_political/map/MapMenu.tsx:605
 msgid "{regionsAway, plural, one {# region away} other {# regions away}}"
-msgstr ""
+msgstr "{regionsAway, plural, one {# 區域外} other {# 區域外}}"
 
 #: src/pages/events/index.tsx:97
 msgid "{registeredCount} countries registered"
@@ -199,9 +212,17 @@ msgstr "{savedPrestigeCount} 聲望點數已啟用於此技能"
 msgid "{score}/{0} Rounds"
 msgstr "{score}/{0} 回合"
 
+#: src/components/_economy/inventory/DismantleModal.tsx:178
+msgid "{selectedCount, plural, one {Dismantle # item for} other {Dismantle # items for}}"
+msgstr "{selectedCount, plural, one {拆解 # 物品為了} other {拆解 # 物品為了}}"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:283
+msgid "{selectedCount} selected"
+msgstr "{selectedCount} 已選取"
+
 #: src/components/_layout/LayoutMapUserMenu.tsx:79
 msgid "{value} km"
-msgstr ""
+msgstr "{value} 公里"
 
 #: src/components/_common/GameRules.tsx:197
 msgid "* A gear merging scheme consists of buying items with very low durability at a relatively high price, merging them, and then reselling the result at a low price."
@@ -225,7 +246,7 @@ msgstr "+{hiddenBattles} 更多戰鬥"
 
 #: src/components/_user/user/Level.tsx:185
 msgid "+{xpBonusPercent}%"
-msgstr ""
+msgstr "+{xpBonusPercent}%"
 
 #: src/components/_user/notification/notification.frontConfig.tsx:381
 #: src/components/_user/notification/notification.frontConfig.tsx:1095
@@ -652,7 +673,7 @@ msgstr "<0>{0}</0> 對抗 <1/> 的宿敵"
 #. placeholder {0}: levelConfig.stats.attackBonus || 0
 #: src/components/_other/upgrade/upgrade.frontConfig.tsx:49
 msgid "<0>{0}</0> Attack bonus when attacking from this region.<1/>Citizens get the full bonus, allied countries get half."
-msgstr ""
+msgstr "<0>{0}</0> 從此區域攻擊可獲得攻擊紅利。<1/>公民得到完整紅利，同盟國家得到一半。"
 
 #. placeholder {0}: sideBonus.regionNotLinkedToCapitalMalusPercent
 #: src/components/_military/battle/BattleDamageBonuses.tsx:209
@@ -672,7 +693,7 @@ msgstr "<0>{0}</0> 因為 <1/> 佔領了至少一塊 <2/> 地區"
 #. placeholder {0}: levelConfig.stats.defenseBonus || 0
 #: src/components/_other/upgrade/upgrade.frontConfig.tsx:34
 msgid "<0>{0}</0> Defense bonus when defending this region.<1/>Citizens get the full bonus, allied countries get half. Defensive pact partners don't benefit."
-msgstr ""
+msgstr "<0>{0}</0> 防禦此區域時可獲得防禦紅利。<1/> 公民得到完整紅利，同盟國家得到一半。共同防禦條約夥伴沒有紅利。"
 
 #. placeholder {0}: data.acceptanceFeeReturned
 #: src/components/_user/notification/notification.frontConfig.tsx:1629
@@ -804,14 +825,14 @@ msgid "<0>Emotes</0> in chat"
 msgstr "在聊天中使用 <0>表情符號</0> "
 
 #. placeholder {0}: ts.case2
-#: src/components/_military/damageRanking/BattleLoot.tsx:62
-msgid "<0>Every <1/> damage dealt in this round across both sides rolls an <2>{0}</2> into the round loot pool.</0><3>Round loot are distributed at the end of the round, top 1 damage dealer get top 1 item and so on...</3>"
-msgstr "<0> 在這回合雙方每造成 <1/> 傷害會骰出一個 <2>{0}</2> 到回合獎勵池。</0><3>回合獎勵會在回合結束時分配，傷害最高的拿到最好的物品，依此類推...</3>"
+#: src/components/_military/damageRanking/BattleLoot.tsx:64
+msgid "<0>Every <1/> damage dealt in this round across both sides rolls an <2>{0}</2> into the round loot pool.</0><3>The pool is handed out at the end of the round: the top damage dealer gets the most valuable item, #2 the next one, and so on. The item you are in line for is shown on your row in the ranking below.</3>"
+msgstr "<0>雙方每在此回合造成 <1/> 傷害會在獎勵池骰出一個 <2>{0}</2>。</0><3> 獎勵池會在回合結束時發放：傷害最高的人拿到價值最高的，#2拿到下一個，依此類推。你預計獲得的物品會在排行榜中你的位置顯現。</3>"
 
 #. placeholder {0}: ts.case2
-#: src/components/_military/damageRanking/BattleLoot.tsx:75
-msgid "<0>Every <1/> total damage dealt across both sides rolls an <2>{0}</2> into the battle loot pool.</0><3>Battle loot are distributed at the end of the battle, top 1 damage dealer get top 1 item and so on...</3>"
-msgstr "<0> 在這場戰鬥雙方每造成 <1/> 傷害就會骰出一個 <2>{0}</2> 到戰鬥獎勵池。</0><3>戰鬥獎勵會在戰鬥結束時分配，傷害最高的拿到最好的物品，依此類推...</3>"
+#: src/components/_military/damageRanking/BattleLoot.tsx:79
+msgid "<0>Every <1/> total damage dealt across both sides rolls an <2>{0}</2> into the battle loot pool.</0><3>The pool is handed out at the end of the battle: the top damage dealer gets the most valuable item, #2 the next one, and so on. The item you are in line for is shown on your row in the ranking below.</3>"
+msgstr "<0>雙方每在此戰鬥造成 <1/> 傷害會在獎勵池骰出一個 <2>{0}</2>。</0><3> 獎勵池會在回合結束時發放：傷害最高的人拿到價值最高的，#2拿到下一個，依此類推。你預計獲得的物品會在排行榜中你的位置顯現。</3>"
 
 #. placeholder {0}: 1
 #. placeholder {1}: worker.fidelity
@@ -1285,7 +1306,7 @@ msgstr "同意這條合約需要 <0>{0}</0> 費用。費用已在完成最低傷
 
 #: src/components/_economy/inventory/case/RarityChances.tsx:52
 msgid "A random resource stack"
-msgstr ""
+msgstr "隨機資源組"
 
 #: src/components/_political/event/event.frontConfig.tsx:143
 msgid "A revolution has started in <0/>"
@@ -1469,6 +1490,8 @@ msgstr "高級褲子"
 msgid "Agrarian"
 msgstr "農業主義"
 
+#: src/components/_economy/inventory/ItemGridFilters.tsx:119
+#: src/components/_economy/inventory/ItemGridFilters.tsx:147
 #: src/components/_military/battle/ActiveBattlesList.tsx:134
 #: src/components/_military/battle/EndedBattlesList.tsx:78
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:79
@@ -1578,6 +1601,12 @@ msgstr "聯盟名稱"
 msgid "Allies"
 msgstr "盟友"
 
+#. placeholder {0}: sharedRange.min
+#. placeholder {1}: sharedRange.max
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:139
+msgid "Allowed between {0} and {1}"
+msgstr "許可介於 {0} 和 {1}"
+
 #: src/components/_economy/workOffer/WageInfoAlert.tsx:48
 msgid "Allowed wage range:"
 msgstr "許可薪資範圍："
@@ -1651,7 +1680,7 @@ msgstr "把會動的 <0>GIF</0> 當作頭像"
 
 #: src/components/_social/announcement/GovernmentAnnouncementCard.tsx:63
 msgid "Announcement"
-msgstr ""
+msgstr "公告"
 
 #: src/pages/country/[countryId]/government.tsx:158
 msgid "Announcements"
@@ -1889,7 +1918,7 @@ msgstr "戰爭與"
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:271
 msgid "Atlas"
-msgstr ""
+msgstr "阿特拉斯"
 
 #: src/components/_military/hit/HitButton.tsx:531
 #: src/components/_political/map/MapMenu.tsx:438
@@ -1961,9 +1990,9 @@ msgstr "自動化機械"
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:147
 msgid "Available in"
-msgstr ""
+msgstr "可使用於"
 
-#: src/components/_user/mission/MissionsList.tsx:322
+#: src/components/_user/mission/MissionsList.tsx:339
 msgid "Available now"
 msgstr "目前可使用"
 
@@ -1988,7 +2017,7 @@ msgstr "嬰兒潮世代"
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:191
 msgid "Back to home region"
-msgstr ""
+msgstr "回到住家區域"
 
 #: src/components/_layout/LayoutOptions.tsx:175
 msgid "Background pattern"
@@ -2098,11 +2127,7 @@ msgstr "{regionName} {score} 的戰鬥"
 msgid "Battle Hero"
 msgstr "戰鬥英雄"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:60
-msgid "Battle loot"
-msgstr "戰利品"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:90
+#: src/components/_military/damageRanking/BattleLoot.tsx:61
 msgid "Battle loot pool"
 msgstr "獎勵池"
 
@@ -2628,6 +2653,11 @@ msgstr "已領取"
 msgid "Claimed so far"
 msgstr "已領取迄今"
 
+#: src/components/_economy/inventory/DismantleModal.tsx:294
+#: src/components/_economy/inventory/ItemSelectorModal.tsx:166
+msgid "Clear"
+msgstr "清除"
+
 #: src/components/_political/country/CountrySelectV2.tsx:278
 msgid "Clear selection"
 msgstr "清除選擇"
@@ -2669,7 +2699,7 @@ msgstr "點擊以選擇提案"
 msgid "Climate"
 msgstr "氣候"
 
-#: ../__ui/src/components/Modal/Modal.tsx:302
+#: ../__ui/src/components/Modal/Modal.tsx:316
 #: src/components/_political/map/MapMenu.tsx:247
 msgid "Close"
 msgstr "關閉"
@@ -2684,19 +2714,19 @@ msgstr "冷死了"
 
 #: src/components/_political/map/MapMenu.tsx:679
 msgid "Collect"
-msgstr ""
+msgstr "蒐集"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:586
 msgid "Collect <0/> on the map"
-msgstr ""
+msgstr "在地圖上蒐集 <0/>"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:584
 msgid "Collect Cases on the Map"
-msgstr ""
+msgstr "在地圖上蒐集箱子"
 
 #: src/components/_political/map/MapMenu.tsx:665
 msgid "Collect the wooden case lying on this region"
-msgstr ""
+msgstr "蒐集位於此區域的木箱"
 
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:106
 msgid "Colonel"
@@ -2962,7 +2992,7 @@ msgstr "參與反抗 <0/> 次"
 
 #: src/components/_political/region/ResistanceFocusItem.tsx:218
 msgid "Contribute to the resistance"
-msgstr ""
+msgstr "參與反抗"
 
 #: src/utils/translations.tsx:39
 msgid "Cooked Fish"
@@ -3039,7 +3069,7 @@ msgstr "國家"
 
 #: src/components/_user/user/SkillUpgradeBonusRows.tsx:46
 msgid "Country buildings:"
-msgstr ""
+msgstr "國家建築："
 
 #: src/pages/country/[countryId]/index.tsx:395
 msgid "Country development income bonus"
@@ -3185,7 +3215,7 @@ msgstr "暴擊"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:597
 msgid "Cross <0/> regions on the map"
-msgstr ""
+msgstr "在地圖上跨過 <0/> 個區域"
 
 #: src/components/_other/shop/skin.frontConfig.tsx:89
 msgid "Crossbow"
@@ -3233,7 +3263,7 @@ msgstr "客製化用戶名稱字體"
 msgid "d. Any form of discrimination, racism, xenophobia, antisemitism, homophobia, transphobia and hate speech"
 msgstr "d. 任何形式的歧視、種族主義、仇外心理、反猶主義、同性戀恐懼症、跨性別恐懼症、及仇恨言論"
 
-#: src/components/_user/mission/MissionsList.tsx:253
+#: src/components/_user/mission/MissionsList.tsx:268
 msgid "Daily"
 msgstr "每日"
 
@@ -3633,6 +3663,10 @@ msgstr "分解 <0/> 物品"
 msgid "Dismantle Item"
 msgstr "拆解物品"
 
+#: src/components/_economy/inventory/DismantleModal.tsx:175
+msgid "Dismantle items"
+msgstr "拆解物品"
+
 #: src/components/_user/apiToken/ApiTokenList.tsx:153
 msgid "Dismiss"
 msgstr "消除"
@@ -3646,7 +3680,7 @@ msgstr "瓦解聯盟"
 msgid "Dissolve the alliance permanently, removing every member country."
 msgstr "永久瓦解聯盟，移除所有成員國。"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:97
+#: src/components/_military/damageRanking/BattleLoot.tsx:103
 msgid "Distributed"
 msgstr "已分配"
 
@@ -3721,6 +3755,10 @@ msgstr "龍"
 msgid "e. Content about ongoing real-world wars and armed conflicts (most notably the Russo-Ukrainian war and the Israeli–Palestinian conflict)"
 msgstr "e. 有關真實世界進行中戰爭及武裝衝突之內容（尤其是俄烏戰爭及以巴衝突）"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:211
+msgid "Each item gets its own offer, all at the same price."
+msgstr "每個物品得到各自的賣單，全部在同樣的價錢。"
+
 #: src/components/_user/user/SkillUpgrade.tsx:293
 msgid "Each prestige point gives the equivalent of {skillBonusLevels} level of the selected skill"
 msgstr "每點聲望點給予選取之技能 {skillBonusLevels} 等"
@@ -3780,7 +3818,7 @@ msgstr "編輯描述"
 
 #: src/components/_political/region/RegionResistance.tsx:148
 msgid "Edit focus message"
-msgstr ""
+msgstr "編輯焦點訊息"
 
 #: src/components/_military/battle/BattleOrderActionsDropdown.tsx:149
 msgid "Edit MU order"
@@ -3788,7 +3826,7 @@ msgstr "編輯軍團命令"
 
 #: src/components/_political/region/SetResistanceFocusModal.tsx:94
 msgid "Edit resistance focus"
-msgstr ""
+msgstr "編輯反抗焦點"
 
 #: src/components/_user/worker/WorkerEditFormModal.tsx:154
 msgid "Edit worker"
@@ -3917,6 +3955,10 @@ msgstr "能量"
 msgid "Ensign"
 msgstr "少尉"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:133
+msgid "Enter a price"
+msgstr "輸入價格"
+
 #: src/components/_political/law/LawFormModal.tsx:244
 msgid "Enter article ID"
 msgstr "輸入文章ID"
@@ -3932,6 +3974,7 @@ msgid "Entrepreneurship"
 msgstr "創業能力"
 
 #: src/components/_economy/inventory/case/RarityChances.tsx:56
+#: src/components/_economy/inventory/ItemGridFilters.tsx:135
 #: src/components/_layout/LayoutOptions.tsx:232
 #: src/components/_user/user/WealthPanel.tsx:56
 #: src/pages/market/index.tsx:81
@@ -3948,6 +3991,10 @@ msgstr "裝備："
 #: src/components/_economy/market/MarketHeader.tsx:20
 msgid "Equipments"
 msgstr "裝備"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:246
+msgid "Equipped items are left out of select all."
+msgstr "裝備的物品已從選取全部去除"
 
 #: src/components/_political/law/GenericLawStatus.tsx:44
 msgid "Error"
@@ -4293,16 +4340,16 @@ msgstr "連枷"
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:181
 msgid "Focus on you"
-msgstr ""
+msgstr "專注於你"
 
 #: src/components/_political/region/SetResistanceFocusModal.tsx:94
 #: src/components/_political/region/SetResistanceFocusModal.tsx:143
 msgid "Focus resistance"
-msgstr ""
+msgstr "集中反抗"
 
 #: src/components/_political/region/RegionResistance.tsx:167
 msgid "Focus resistance here"
-msgstr ""
+msgstr "集中反抗於此"
 
 #: src/components/_layout/LayoutOptions.tsx:278
 msgid "Font"
@@ -4331,7 +4378,7 @@ msgstr "成立一個新的聯盟，且你的國家會是成立國"
 
 #: src/utils/translations.tsx:115
 msgid "Found on the map. Open it to get random resources"
-msgstr ""
+msgstr "於地圖上找到。打開以獲得隨機資源"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:45
 msgid "Founding Father"
@@ -4393,7 +4440,7 @@ msgstr "已花費寶石"
 msgid "General"
 msgstr "將軍"
 
-#: src/components/_user/mission/MissionsList.tsx:334
+#: src/components/_user/mission/MissionsList.tsx:351
 msgid "Generate Missions"
 msgstr "產生任務"
 
@@ -4410,13 +4457,13 @@ msgstr "獲得獨特的 <0>支持者皮膚</0>！"
 msgid "Get multiple skins at once with a 30% discount!"
 msgstr "一次獲得多款造型享有30%折扣"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:221
+#: src/components/_economy/inventory/DismantleModal.tsx:230
 msgid "Get supporter plan"
 msgstr "獲取支持者計畫"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:156
 msgid "Get to the front!"
-msgstr ""
+msgstr "到前面！"
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:94
 msgid "Gift from Vatou, don't tell anyone"
@@ -4469,7 +4516,7 @@ msgstr "球體 (試驗性)"
 
 #: src/components/_political/map/MapLibre.tsx:431
 msgid "Globe view isn't supported on this device"
-msgstr ""
+msgstr "全球視野在此裝置不支援"
 
 #: src/components/_user/UserEquipments.tsx:236
 #: src/utils/translations.tsx:216
@@ -4961,6 +5008,7 @@ msgstr "已購買物品"
 msgid "Item Market"
 msgstr "裝備市場"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:191
 #: src/components/_user/user/WealthPanel.tsx:49
 msgid "Items"
 msgstr "物品"
@@ -5107,10 +5155,6 @@ msgstr "造成 <0/> 次爆擊"
 msgid "Language"
 msgstr "語言"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:116
-msgid "Last"
-msgstr "最後"
-
 #: src/components/_user/user/UserHeader.tsx:358
 msgid "Last connection"
 msgstr "最近連線"
@@ -5245,7 +5289,7 @@ msgstr "傳奇褲子"
 #. placeholder {0}: leveling.level + 1
 #: src/components/_user/user/Level.tsx:123
 msgid "Level {0} reward"
-msgstr ""
+msgstr "等級 {0} 獎勵"
 
 #: src/components/_military/mu/MuLevel.tsx:64
 #: src/components/_military/mu/MuLevelsInfoModal.tsx:89
@@ -5335,6 +5379,10 @@ msgstr "限制："
 msgid "Line"
 msgstr "線條"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:297
+msgid "Listed at, taxes included"
+msgstr "列出，含稅率"
+
 #: src/utils/translations.tsx:72
 msgid "Little cuties used to make steaks :("
 msgstr "用來做成牛排的小可愛們 :("
@@ -5375,7 +5423,7 @@ msgstr "已上鎖，重置你的技能以重新分配"
 
 #: src/pages/index.tsx:159
 msgid "Login"
-msgstr ""
+msgstr "登入"
 
 #: src/components/_user/user/MyAvatar.tsx:59
 msgid "Logout"
@@ -5405,10 +5453,6 @@ msgstr "戰利品機率"
 #: src/components/_user/notification/notification.frontConfig.tsx:2086
 msgid "Loot reward"
 msgstr "戰利品獎勵"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:130
-msgid "Loots"
-msgstr "戰利品"
 
 #: src/components/_other/shop/skin.frontConfig.tsx:23
 msgid "Love Paper Jet"
@@ -5481,6 +5525,10 @@ msgstr "地圖圖示"
 #: src/pages/user/[userId]/account.tsx:26
 msgid "Market"
 msgstr "市場"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:205
+msgid "Market average"
+msgstr "市場平均"
 
 #: src/components/_political/country/CountryTaxes.tsx:24
 #: src/components/_political/law/LawFormModal.tsx:258
@@ -5652,7 +5700,7 @@ msgstr "傭兵名聲"
 
 #: src/components/_political/region/SetResistanceFocusModal.tsx:126
 msgid "Message"
-msgstr ""
+msgstr "訊息"
 
 #: src/components/_other/shop/SkinPackModal.tsx:236
 msgid "Message (Optional)"
@@ -5811,7 +5859,7 @@ msgid "Mission tags"
 msgstr "任務標籤"
 
 #: src/components/_user/mission/MissionsHeader.tsx:56
-#: src/components/_user/mission/MissionsList.tsx:232
+#: src/components/_user/mission/MissionsList.tsx:247
 #: src/components/_user/user/UserHeader.tsx:225
 msgid "Missions"
 msgstr "任務"
@@ -5854,7 +5902,7 @@ msgid "Money Won"
 msgstr "獲得的錢"
 
 #: src/components/_military/mu/MuMemberList.tsx:191
-#: src/components/_user/mission/MissionsList.tsx:279
+#: src/components/_user/mission/MissionsList.tsx:294
 msgid "Monthly"
 msgstr "每月"
 
@@ -5862,7 +5910,7 @@ msgstr "每月"
 msgid "Monthly damages: <0>{monthlyDamages}</0>"
 msgstr "月傷害：<0>{monthlyDamages}</0>"
 
-#: src/components/_user/mission/MissionsList.tsx:311
+#: src/components/_user/mission/MissionsList.tsx:328
 msgid "Monthly missions are not available yet"
 msgstr "月任務目前不可使用"
 
@@ -5901,11 +5949,11 @@ msgstr "提案"
 #: src/components/_political/region/MoveButton.tsx:120
 #: src/components/_political/region/MoveButton.tsx:132
 msgid "Move"
-msgstr ""
+msgstr "移動"
 
 #: src/components/_political/map/MapMenu.tsx:640
 msgid "Move & collect"
-msgstr ""
+msgstr "移動＆蒐集"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:519
 msgid "Move a company to another region"
@@ -6051,7 +6099,7 @@ msgstr "國籍已更新"
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:157
 msgid "Nearest wooden case"
-msgstr ""
+msgstr "最近的木箱"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:57
 msgid "Need a job?"
@@ -6322,7 +6370,12 @@ msgstr "還沒有優勢點排名。"
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:142
 msgid "No home region set"
-msgstr ""
+msgstr "沒有設定住家區域"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:263
+#: src/components/_economy/inventory/ItemSelectorModal.tsx:198
+msgid "No items found"
+msgstr "沒有找到物品"
 
 #: src/components/_user/kits/KitsPopover.tsx:130
 msgid "No kits yet - add one to quick-equip a full loadout."
@@ -6361,7 +6414,7 @@ msgstr "沒有可用的里程碑"
 msgid "No military units found"
 msgstr "沒有找到軍團"
 
-#: src/components/_user/mission/MissionsList.tsx:313
+#: src/components/_user/mission/MissionsList.tsx:330
 msgid "No missions available"
 msgstr "沒有任務可用"
 
@@ -6433,6 +6486,10 @@ msgstr "找不到交易紀錄"
 #: src/pages/country/[countryId]/wars.tsx:32
 msgid "No wars found"
 msgstr "找不到戰爭"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:239
+msgid "No weapons or equipment to dismantle"
+msgstr "沒有拆解的武器或裝備"
 
 #: src/components/_economy/workOffer/WorkOfferList.tsx:182
 msgid "No work offers"
@@ -6881,7 +6938,7 @@ msgstr "貼上一個連結至你的宣傳文章或留空。"
 
 #: src/components/_user/user/Level.tsx:189
 msgid "Paused"
-msgstr ""
+msgstr "暫停"
 
 #: src/pages/shop/index.tsx:45
 msgid "Payment successful! Thanks for supporting the game <3"
@@ -6938,6 +6995,10 @@ msgstr "手機驗證已要求"
 #: src/components/_other/tour/tuto.frontConfig.tsx:136
 msgid "Pick a fight!"
 msgstr "選擇一個戰鬥！"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:217
+msgid "Pick up to {maxItemsPerListing} weapons or equipment in perfect condition to sell at the same price."
+msgstr "拿起最多 {maxItemsPerListing} 完整的武器或裝備以在同價錢販賣。"
 
 #: src/utils/translations.tsx:117
 msgid "Pill"
@@ -6998,11 +7059,11 @@ msgstr "有名的文章"
 #: src/components/_political/region/RegionHeader.tsx:96
 #: src/components/_political/region/RegionTooltip.tsx:89
 msgid "Population"
-msgstr ""
+msgstr "人口"
 
 #: src/components/_political/region/RegionHeader.tsx:98
 msgid "Population (currently here)"
-msgstr ""
+msgstr "人口（目前此處）"
 
 #: src/components/_social/announcement/AnnouncementFormModal.tsx:21
 #: src/components/_social/announcement/AnnouncementList.tsx:48
@@ -7092,6 +7153,10 @@ msgstr "聲望："
 #: src/components/_user/notification/notification.frontConfig.tsx:2172
 msgid "Prestige!"
 msgstr "飛升！"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:238
+msgid "Price"
+msgstr "價格"
 
 #: src/components/_economy/itemTrading/ItemTradingOrderFormModal.tsx:558
 msgid "Price auto-matches existing orders"
@@ -7281,18 +7346,18 @@ msgstr "紫色手杖"
 
 #: src/components/_political/region/SetResistanceFocusModal.tsx:131
 msgid "Push the resistance here before they dig in..."
-msgstr ""
+msgstr "在此處推動反抗在被發現之前..."
 
 #: src/components/_political/region/RegionResistance.tsx:216
 msgid "Push the resistance here first."
-msgstr ""
+msgstr "在此處先推動反抗。"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:36
 msgid "Put yourself to work!"
 msgstr "開始工作吧！"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:198
-#: src/components/_economy/inventory/DismantleModal.tsx:288
+#: src/components/_economy/inventory/DismantleModal.tsx:46
+#: src/components/_economy/inventory/DismantleModal.tsx:306
 msgid "Quick dismantle"
 msgstr "快速拆解"
 
@@ -7581,7 +7646,7 @@ msgstr "地區"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:595
 msgid "Regions Crossed"
-msgstr ""
+msgstr "已跨過區域"
 
 #: src/components/_political/party/party.frontConfig.tsx:125
 msgid "Regions you occupy generate double the amount of resistance."
@@ -7589,7 +7654,7 @@ msgstr "你佔領的地區產生兩倍的反抗值。"
 
 #: src/pages/index.tsx:149
 msgid "Register"
-msgstr ""
+msgstr "登記"
 
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:124
 msgid "Register my country"
@@ -7713,7 +7778,7 @@ msgstr "移除宿敵"
 
 #: src/components/_political/region/RegionResistance.tsx:154
 msgid "Remove focus"
-msgstr ""
+msgstr "移除焦點"
 
 #: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:60
 #: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:63
@@ -7836,11 +7901,11 @@ msgstr "重置於"
 #: src/components/_layout/map.frontConfig.tsx:54
 #: src/components/_political/region/RegionHeader.tsx:88
 msgid "Residents"
-msgstr ""
+msgstr "居民"
 
 #: src/components/_political/region/RegionHeader.tsx:90
 msgid "Residents (home here)"
-msgstr ""
+msgstr "居民（住在此處）"
 
 #: src/components/_military/hit/HitButton.tsx:529
 #: src/components/_user/mission/mission.frontConfig.tsx:564
@@ -7859,11 +7924,11 @@ msgstr "抵抗度貢獻者"
 
 #: src/components/_political/region/ResistanceFocusItem.tsx:244
 msgid "Resistance focus"
-msgstr ""
+msgstr "反抗焦點"
 
 #: src/components/_political/region/RegionResistance.tsx:205
 msgid "Resistance focused by <0/>"
-msgstr ""
+msgstr "<0/> 集中了反抗"
 
 #: src/components/_military/battle/BattleName.tsx:155
 msgid "Resistance for {regionName} {score}"
@@ -7954,7 +8019,7 @@ msgstr "回合"
 msgid "Round {0}"
 msgstr "回合 {0}"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:90
+#: src/components/_military/damageRanking/BattleLoot.tsx:61
 msgid "Round {roundNumber} loot pool"
 msgstr "回合 {roundNumber} 獎勵池"
 
@@ -7984,10 +8049,6 @@ msgstr "回合預計結束時間"
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:79
 msgid "Round Hero"
 msgstr "回合英雄"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:60
-msgid "Round loot"
-msgstr "回合戰利品"
 
 #: src/components/_military/battle/BattleTimeline.tsx:78
 msgid "Rounds timeline"
@@ -8078,9 +8139,10 @@ msgstr "選擇一個地點"
 msgid "Select a region"
 msgstr "選擇一個地區"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:247
-msgid "Select all"
-msgstr "全選"
+#. placeholder {0}: bulkItems.length
+#: src/components/_economy/inventory/DismantleModal.tsx:258
+msgid "Select all ({0})"
+msgstr "選取全部（{0}）"
 
 #: src/components/_political/partyMotion/PartyMotionFormModal.tsx:141
 msgid "Select an occupied region"
@@ -8116,6 +8178,10 @@ msgstr "在自己公司工作"
 #: src/components/_user/mission/mission.frontConfig.tsx:87
 msgid "Self work <0/> times in your companies"
 msgstr "在自己的公司工作 <0/> 次"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:77
+msgid "Sell an item"
+msgstr "賣一個物品"
 
 #: src/components/_economy/company/CompanyDropdown.tsx:332
 msgid "Sell company?"
@@ -8397,7 +8463,7 @@ msgstr "跳過教學"
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:243
 msgid "Skipped"
-msgstr ""
+msgstr "已跳過"
 
 #: src/components/_other/shop/skin.frontConfig.tsx:260
 msgid "Sling Stones"
@@ -8453,7 +8519,7 @@ msgstr "支出"
 
 #: src/components/_user/user/skills.frontConfig.tsx:98
 msgid "Spent when moving on the map: 10 points per region crossed. The regions your stamina can't cover are paid in oil. It refills 10 points an hour and cannot be raised with skill points."
-msgstr ""
+msgstr "在地圖上移動時消耗：每跨過一個區域花費 10 點。你的耐力無法跨過的區域會使用油支付。每個小時回復 10 點且無法使用技能點數提升。"
 
 #: src/components/_political/country/CountryHeader.tsx:230
 msgid "Stable, conquest-proof strength. Still used for unrest, government wages and revolution cost. Other costs use <0>Average development</0>."
@@ -8466,7 +8532,7 @@ msgstr "在此技能分配聲望點數（儲存時生效，技能重置時重置
 #: src/components/_user/user/skills.frontConfig.tsx:104
 #: src/components/_user/user/skills.frontConfig.tsx:105
 msgid "Stamina"
-msgstr ""
+msgstr "耐力"
 
 #: src/components/_political/law/law.frontConfig.tsx:169
 #: src/components/_political/law/law.frontConfig.tsx:171
@@ -8525,7 +8591,7 @@ msgstr "開始於 <0/>"
 msgid "Started<0/><1/>"
 msgstr "開始於 <0/><1/>"
 
-#: src/components/_user/mission/MissionsList.tsx:292
+#: src/components/_user/mission/MissionsList.tsx:308
 msgid "Starting"
 msgstr "新手起步"
 
@@ -8621,11 +8687,16 @@ msgstr "成功登入！"
 msgid "Sugar Daddy"
 msgstr "乾爹"
 
+#. placeholder {0}: sharedRange.estimatedValue
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:253
+msgid "Suggested price <0>{0}</0>"
+msgstr "建議價格 <0>{0}</0>"
+
 #: src/components/_user/premium/PremiumActions.tsx:60
 msgid "Support the game"
 msgstr "支持這個遊戲"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:209
+#: src/components/_economy/inventory/DismantleModal.tsx:217
 msgid "Support the game and quickly dismantle items!"
 msgstr "支持這個遊戲，且快速拆解物品"
 
@@ -8678,7 +8749,7 @@ msgstr "最高指揮官"
 
 #: src/components/_political/map/MapLibre.tsx:432
 msgid "Switched back to the flat map."
-msgstr ""
+msgstr "切換回平面地圖。"
 
 #: src/components/_political/country/CountryDiplomacyGrid.tsx:286
 #: src/components/_political/country/CountryTooltip.tsx:118
@@ -8759,7 +8830,7 @@ msgstr "隊伍"
 
 #: src/components/_political/region/SetResistanceFocusModal.tsx:127
 msgid "Tell your citizens why this region comes first"
-msgstr ""
+msgstr "告訴你的公民為何此區域優先"
 
 #: src/components/_military/mercenaryContract/MercenaryAuctionList.tsx:140
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:91
@@ -8839,13 +8910,17 @@ msgstr "<0/> 的完整紅利適用於全球 <2>發展度</2>的占比 <1/>。在
 
 #: src/components/_political/map/MapLibreErrorBoundary.tsx:69
 msgid "The map needs WebGL2, which your browser or device doesn't support. Everything else in the game works normally."
-msgstr ""
+msgstr "這個地圖需要 WebGL2，你的瀏覽器或裝置不支援。其餘所有遊戲內容皆正常運作。"
 
 #. placeholder {0}: Math.round(contract.moneyPool * 10) / 100
 #: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:85
 #: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:64
 msgid "The MU will receive the acceptance fee back, partial payout for damage done, and a 10% penalty fee of <0>{0}</0>. Are you sure?"
 msgstr "軍團將領回通過費用，付出已造成傷害的比例，還有對 <0>{0}</0> 的10%懲罰費用。你確定嗎？"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:136
+msgid "The price must be positive"
+msgstr "價格必須為正數"
 
 #: src/components/_political/event/event.frontConfig.tsx:88
 msgid "The revolution in <0/> has been suppressed. The government remains in power."
@@ -8857,7 +8932,7 @@ msgstr "在 <0/> 的革命已成功！政府已被驅逐。"
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:239
 msgid "The roll is skipped while you hold {maxLoots} uncollected cases"
-msgstr ""
+msgstr "重骰已被跳過當你有 {maxLoots} 未蒐集的箱子"
 
 #: src/pages/region/[regionId]/index.tsx:110
 msgid "The strategic resource will be reshuffled in the following amount of time."
@@ -8874,6 +8949,10 @@ msgstr "這個宇宙欠了你一份大人情"
 #: src/components/_common/GameRules.tsx:117
 msgid "The use of bots, scripts, or any form of automation to gain an advantage over other players is strictly forbidden. This includes, but is not limited to, web scraping and creating scripts that bypass the game intended functionality or restrictions."
 msgstr "使用機器人、腳本、或任何形式的自動化以獲得利益影響其他玩家是嚴格禁止的。這包含但不限於，網頁抓取和創建腳本以繞過遊戲刻意的功能或限制。"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:228
+msgid "These items have no authorized price in common. Remove the cheapest or the most valuable one."
+msgstr "這接物品沒有合格的普遍價格。移除最便宜或最有價值的那個。"
 
 #: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:139
 msgid "This action will submit your MU bid for this contract."
@@ -8897,7 +8976,7 @@ msgstr "這個國家是極端帝國主義：它不能擁有政府成員，只能
 
 #: src/components/_political/map/MapLibreErrorBoundary.tsx:66
 msgid "This device can't display the map"
-msgstr ""
+msgstr "這個裝置無法呈現此地圖"
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:42
 msgid "This equipment is green and so is grass"
@@ -8979,7 +9058,7 @@ msgstr "該來生產了！"
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:249
 msgid "Time until the next case roll"
-msgstr ""
+msgstr "到下次箱子重骰的時間"
 
 #: src/components/_other/shop/skinPack.frontConfig.tsx:17
 msgid "Tiny Pixel"
@@ -9065,7 +9144,6 @@ msgstr "暴風巨著"
 msgid "Tome of Tides"
 msgstr "海潮巨著"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:124
 #: src/components/_social/ArticleList.tsx:209
 msgid "Top"
 msgstr "熱門"
@@ -9169,7 +9247,7 @@ msgstr "總計獎賞"
 
 #: src/components/_user/user/Level.tsx:143
 msgid "Total XP"
-msgstr ""
+msgstr "總經驗"
 
 #: src/components/_user/mission/MissionsHeader.tsx:95
 msgid "Total XP earned from missions and milestones"
@@ -9273,11 +9351,11 @@ msgstr "翻譯者"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:574
 msgid "Travel"
-msgstr ""
+msgstr "旅行"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:576
 msgid "Travel to another region <0/> times"
-msgstr ""
+msgstr "旅行到其他區域 <0/> 次"
 
 #: src/components/_other/shop/skin.frontConfig.tsx:95
 msgid "Trebuchet"
@@ -9313,7 +9391,7 @@ msgstr "解除黑名單（顯示內容）"
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:227
 msgid "Uncollected cases waiting on the map, out of {maxLoots}"
-msgstr ""
+msgstr "地圖上尚未蒐集的箱子，出於 {maxLoots}"
 
 #: src/components/_user/UserEquipments.tsx:121
 msgid "Unequip all"
@@ -9383,7 +9461,7 @@ msgstr "動盪值"
 msgid "Unrest Contributors"
 msgstr "動盪值貢獻者"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:247
+#: src/components/_economy/inventory/DismantleModal.tsx:257
 msgid "Unselect all"
 msgstr "取消全選"
 
@@ -9398,7 +9476,7 @@ msgstr "更新"
 
 #: src/components/_political/region/SetResistanceFocusModal.tsx:143
 msgid "Update focus"
-msgstr ""
+msgstr "更新焦點"
 
 #: src/pages/user/[userId]/settings.tsx:77
 msgid "Update infos"
@@ -9428,7 +9506,7 @@ msgstr "升級技能"
 msgid "Upgrade storage"
 msgstr "升級儲存空間"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:205
+#: src/components/_economy/inventory/DismantleModal.tsx:213
 msgid "Upgrade to supporter"
 msgstr "升級為支持者"
 
@@ -9813,6 +9891,7 @@ msgstr "武器"
 msgid "Weapon:"
 msgstr "武器："
 
+#: src/components/_economy/inventory/ItemGridFilters.tsx:127
 #: src/components/_user/user/WealthPanel.tsx:63
 msgid "Weapons"
 msgstr "武器"
@@ -9826,7 +9905,7 @@ msgid "Weapons, ammo and gear above this rarity cannot be used in this tournamen
 msgstr "武器、子彈、以及裝備超過此稀有度無法於此錦標賽使用。"
 
 #: src/components/_military/mu/MuMemberList.tsx:192
-#: src/components/_user/mission/MissionsList.tsx:266
+#: src/components/_user/mission/MissionsList.tsx:281
 msgid "Weekly"
 msgstr "每週"
 
@@ -9933,11 +10012,11 @@ msgstr "木頭"
 
 #: src/utils/translations.tsx:113
 msgid "Wooden Case"
-msgstr ""
+msgstr "木箱"
 
 #: src/components/_political/map/MapMenu.tsx:159
 msgid "Wooden case collected!"
-msgstr ""
+msgstr "木箱已蒐集！"
 
 #: src/components/_other/shop/skin.frontConfig.tsx:251
 msgid "Wooden Self Bow"
@@ -10020,7 +10099,7 @@ msgstr "經驗值"
 
 #: src/components/_user/user/Level.tsx:169
 msgid "XP bonus"
-msgstr ""
+msgstr "經驗紅利"
 
 #: src/components/_user/mission/MissionsHeader.tsx:92
 msgid "XP earned"
@@ -10045,7 +10124,7 @@ msgstr "你已是其他國家的國會議員了，請先卸任。"
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:144
 msgid "You are already home"
-msgstr ""
+msgstr "你已在家"
 
 #: src/pages/country/[countryId]/index.tsx:107
 msgid "You are already president of another country. Resign first."
@@ -10075,7 +10154,7 @@ msgstr "你並未參與"
 
 #: src/components/_military/hit/HitButton.tsx:469
 msgid "You are standing in this region, so you can fight here."
-msgstr ""
+msgstr "你政戰在此區域，所以可以在此處戰鬥。"
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:53
 msgid "You are very skilled!"
@@ -10106,13 +10185,13 @@ msgstr "你帶了10個小孩到這個世界（等級 >= {0}）"
 msgid "You can change it later."
 msgstr "你待會可以更改它。"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:211
+#: src/components/_economy/inventory/DismantleModal.tsx:219
 msgid "You can dismantle items from your inventory by selecting an item."
 msgstr "你可以在倉庫中透過選取裝備來拆解裝備。"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:158
 msgid "You can only fight where you stand. Move to the battle region, it costs <0>Stamina</0>, then hit to deal <1>Damages</1>."
-msgstr ""
+msgstr "你只能在你站在此處時戰鬥。移動到此區域，花費 <0>耐力</0>，然後攻擊以造成 <1>傷害</1>。"
 
 #: src/components/_political/election/CandidateFormModal.tsx:62
 msgid "You can optionally link a campaign article to your candidacy."
@@ -10256,6 +10335,10 @@ msgstr "你必須花費所有 3 點傳統點數 (剩餘 {pointsRemaining})"
 msgid "You need a country to take part"
 msgstr "你需要一個國家以參與"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:177
+msgid "You need to be level {minLevel} to sell equipment"
+msgstr "你需要至少達到等級 {minLevel} 以銷售裝備"
+
 #: src/components/_user/UserEquipments.tsx:160
 msgid "You need to equip a weapon first"
 msgstr "你需要先裝備一件武器"
@@ -10271,6 +10354,18 @@ msgstr "你從 <0/> 那獲取的高級方案已到期，有考慮訂閱和贊助
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:136
 msgid "You prestiged and lost your levels"
 msgstr "你飛升並失去了等級"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:288
+msgid "You receive"
+msgstr "你獲得"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:306
+msgid "You receive if all sell"
+msgstr "將獲得若全部販賣"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:286
+msgid "You receive, per item"
+msgstr "你獲得，每個物品"
 
 #. placeholder {0}: data.rank
 #: src/components/_user/notification/notification.frontConfig.tsx:1267
@@ -10458,7 +10553,7 @@ msgstr "你的增益會在一個小時內過期。減益即將開始。"
 
 #: src/components/_political/region/SetResistanceFocusModal.tsx:102
 msgid "Your citizens will see <0/> in their battle list, with this message. It gives no bonus: it tells people where to spend their contributions."
-msgstr ""
+msgstr "你的公民會看到 <0/> 在他們的戰鬥列表，包含此訊息。這不會給予紅利：這告訴人們要在哪處貢獻。"
 
 #: src/pages/country/[countryId]/index.tsx:142
 msgid "Your citizenship is going to change"
@@ -10471,7 +10566,7 @@ msgstr "你的國家"
 
 #: src/components/_political/region/SetResistanceFocusModal.tsx:112
 msgid "Your country already focuses <0/>. Setting this one releases it."
-msgstr ""
+msgstr "你的國家已集中 <0/>。設定此會釋放它。"
 
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:109
 msgid "Your country is registered"
@@ -10527,7 +10622,7 @@ msgstr "你的敵人"
 
 #: src/components/_political/region/ResistanceFocusItem.tsx:248
 msgid "Your government asks you to push the resistance here."
-msgstr ""
+msgstr "你的政府請你在此處推動反抗。"
 
 #: src/components/_user/auth/WelcomeModal.tsx:80
 msgid "Your infos have been saved."
@@ -10539,7 +10634,7 @@ msgstr "倉庫中存放著你的所有物品，來看看都有什麼！"
 
 #: src/components/_military/hit/HitButton.tsx:468
 msgid "Your location"
-msgstr ""
+msgstr "你的位置"
 
 #: src/components/_military/battle/LootSummaryCard.tsx:75
 #: src/components/_military/battle/LootSummaryCard.tsx:79

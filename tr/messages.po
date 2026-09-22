@@ -77,6 +77,11 @@ msgstr "(üye ortalama gelişimi)"
 msgid "(own development)"
 msgstr "(kendi gelişimi)"
 
+#. placeholder {0}: Math.max(items.length, 1)
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:327
+msgid "{0, plural, one {Put on sale} other {Put # items on sale}}"
+msgstr ""
+
 #. placeholder {0}: myCountry?.name
 #: src/components/_military/battle/EndedBattlesList.tsx:81
 msgid "{0} & allies"
@@ -161,7 +166,7 @@ msgstr "İşçilerinizin maaşlarından %{0} gelir vergisi kesilecektir."
 msgid "{0}% of invested"
 msgstr "Yatırımın %{0} kadarı"
 
-#: src/components/_user/mission/MissionsList.tsx:235
+#: src/components/_user/mission/MissionsList.tsx:250
 msgid "{completedCount}/{totalCount} completed"
 msgstr "{completedCount}/{totalCount} tamamlandı"
 
@@ -169,8 +174,16 @@ msgstr "{completedCount}/{totalCount} tamamlandı"
 msgid "{draftPrestigeCount} prestige point(s) on this skill ({savedPrestigeCount} saved, locked until reset)"
 msgstr ""
 
+#: src/components/_economy/inventory/DismantleModal.tsx:196
+msgid "{equippedCount, plural, one {# of them is equipped} other {# of them are equipped}}"
+msgstr ""
+
 #: src/components/_user/user/Level.tsx:126
 msgid "{nextLevelSkillPoints} Skill Points"
+msgstr ""
+
+#: src/components/_economy/inventory/DismantleModal.tsx:187
+msgid "{rareCount, plural, one {# of them is rare or better} other {# of them are rare or better}}"
 msgstr ""
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:167
@@ -198,6 +211,14 @@ msgstr ""
 #: src/components/_military/battle/RoundScore.tsx:50
 msgid "{score}/{0} Rounds"
 msgstr "{score}/{0} Tur"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:178
+msgid "{selectedCount, plural, one {Dismantle # item for} other {Dismantle # items for}}"
+msgstr ""
+
+#: src/components/_economy/inventory/DismantleModal.tsx:283
+msgid "{selectedCount} selected"
+msgstr ""
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:79
 msgid "{value} km"
@@ -804,14 +825,14 @@ msgid "<0>Emotes</0> in chat"
 msgstr "Sohbette <0>emojiler</0>"
 
 #. placeholder {0}: ts.case2
-#: src/components/_military/damageRanking/BattleLoot.tsx:62
-msgid "<0>Every <1/> damage dealt in this round across both sides rolls an <2>{0}</2> into the round loot pool.</0><3>Round loot are distributed at the end of the round, top 1 damage dealer get top 1 item and so on...</3>"
-msgstr "<0>Bu turda her iki tarafça verilen her <1/> hasar, tur ganimet havuzuna bir <2>{0}</2> ekler.</0><3>Tur ganimetleri turun sonunda dağıtılır; en fazla hasar veren 1. sıradaki eşyayı alır ve bu böyle devam eder...</3>"
+#: src/components/_military/damageRanking/BattleLoot.tsx:64
+msgid "<0>Every <1/> damage dealt in this round across both sides rolls an <2>{0}</2> into the round loot pool.</0><3>The pool is handed out at the end of the round: the top damage dealer gets the most valuable item, #2 the next one, and so on. The item you are in line for is shown on your row in the ranking below.</3>"
+msgstr ""
 
 #. placeholder {0}: ts.case2
-#: src/components/_military/damageRanking/BattleLoot.tsx:75
-msgid "<0>Every <1/> total damage dealt across both sides rolls an <2>{0}</2> into the battle loot pool.</0><3>Battle loot are distributed at the end of the battle, top 1 damage dealer get top 1 item and so on...</3>"
-msgstr "<0>Her iki tarafça toplam verilen her <1/> hasar, savaş ganimet havuzuna bir <2>{0}</2> ekler.</0><3>Savaş ganimetleri savaşın sonunda dağıtılır; en fazla hasar veren 1. sıradaki eşyayı alır ve bu böyle devam eder...</3>"
+#: src/components/_military/damageRanking/BattleLoot.tsx:79
+msgid "<0>Every <1/> total damage dealt across both sides rolls an <2>{0}</2> into the battle loot pool.</0><3>The pool is handed out at the end of the battle: the top damage dealer gets the most valuable item, #2 the next one, and so on. The item you are in line for is shown on your row in the ranking below.</3>"
+msgstr ""
 
 #. placeholder {0}: 1
 #. placeholder {1}: worker.fidelity
@@ -1469,6 +1490,8 @@ msgstr "Geliştirilmiş Pantolon"
 msgid "Agrarian"
 msgstr "Tarımcılık"
 
+#: src/components/_economy/inventory/ItemGridFilters.tsx:119
+#: src/components/_economy/inventory/ItemGridFilters.tsx:147
 #: src/components/_military/battle/ActiveBattlesList.tsx:134
 #: src/components/_military/battle/EndedBattlesList.tsx:78
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:79
@@ -1577,6 +1600,12 @@ msgstr "İttifak adı"
 #: src/components/_military/battle/ActiveBattlesList.tsx:155
 msgid "Allies"
 msgstr "Müttefikler"
+
+#. placeholder {0}: sharedRange.min
+#. placeholder {1}: sharedRange.max
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:139
+msgid "Allowed between {0} and {1}"
+msgstr ""
 
 #: src/components/_economy/workOffer/WageInfoAlert.tsx:48
 msgid "Allowed wage range:"
@@ -1963,7 +1992,7 @@ msgstr "Otomatik Makine"
 msgid "Available in"
 msgstr ""
 
-#: src/components/_user/mission/MissionsList.tsx:322
+#: src/components/_user/mission/MissionsList.tsx:339
 msgid "Available now"
 msgstr ""
 
@@ -2098,11 +2127,7 @@ msgstr "{regionName} için savaş {score}"
 msgid "Battle Hero"
 msgstr "Savaş Kahramanı"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:60
-msgid "Battle loot"
-msgstr "Savaş ganimetleri"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:90
+#: src/components/_military/damageRanking/BattleLoot.tsx:61
 msgid "Battle loot pool"
 msgstr "Savaş ganimet havuzu"
 
@@ -2628,6 +2653,11 @@ msgstr "Talep Edildi"
 msgid "Claimed so far"
 msgstr ""
 
+#: src/components/_economy/inventory/DismantleModal.tsx:294
+#: src/components/_economy/inventory/ItemSelectorModal.tsx:166
+msgid "Clear"
+msgstr ""
+
 #: src/components/_political/country/CountrySelectV2.tsx:278
 msgid "Clear selection"
 msgstr "Seçimi temizle"
@@ -2669,7 +2699,7 @@ msgstr "Önerge seçmek için tıkla"
 msgid "Climate"
 msgstr "İklim"
 
-#: ../__ui/src/components/Modal/Modal.tsx:302
+#: ../__ui/src/components/Modal/Modal.tsx:316
 #: src/components/_political/map/MapMenu.tsx:247
 msgid "Close"
 msgstr "Kapat"
@@ -3233,7 +3263,7 @@ msgstr "Kullanıcı adı için değiştirilebilir yazı tipi"
 msgid "d. Any form of discrimination, racism, xenophobia, antisemitism, homophobia, transphobia and hate speech"
 msgstr "d. Her türlü ayrımcılık, ırkçılık, yabancı düşmanlığı, antisemitizm, homofobi, transfobi ve nefret söylemi"
 
-#: src/components/_user/mission/MissionsList.tsx:253
+#: src/components/_user/mission/MissionsList.tsx:268
 msgid "Daily"
 msgstr "Günlük"
 
@@ -3633,6 +3663,10 @@ msgstr ""
 msgid "Dismantle Item"
 msgstr "Eşyayı Parçala"
 
+#: src/components/_economy/inventory/DismantleModal.tsx:175
+msgid "Dismantle items"
+msgstr ""
+
 #: src/components/_user/apiToken/ApiTokenList.tsx:153
 msgid "Dismiss"
 msgstr "Kapat"
@@ -3646,7 +3680,7 @@ msgstr "İttifakı feshet"
 msgid "Dissolve the alliance permanently, removing every member country."
 msgstr "İttifakı kalıcı olarak feshedin, tüm üye ülkeleri kaldırın."
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:97
+#: src/components/_military/damageRanking/BattleLoot.tsx:103
 msgid "Distributed"
 msgstr "Dağıtıldı"
 
@@ -3720,6 +3754,10 @@ msgstr "Ejderha"
 #: src/components/_common/GameRules.tsx:262
 msgid "e. Content about ongoing real-world wars and armed conflicts (most notably the Russo-Ukrainian war and the Israeli–Palestinian conflict)"
 msgstr "e. Devam eden gerçek dünya savaşları ve silahlı çatışmalar hakkında içerik (özellikle Rusya-Ukrayna savaşı ve İsrail-Filistin çatışması)"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:211
+msgid "Each item gets its own offer, all at the same price."
+msgstr ""
 
 #: src/components/_user/user/SkillUpgrade.tsx:293
 msgid "Each prestige point gives the equivalent of {skillBonusLevels} level of the selected skill"
@@ -3917,6 +3955,10 @@ msgstr "Enerji"
 msgid "Ensign"
 msgstr "Teğmen"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:133
+msgid "Enter a price"
+msgstr ""
+
 #: src/components/_political/law/LawFormModal.tsx:244
 msgid "Enter article ID"
 msgstr "Makale ID girin"
@@ -3932,6 +3974,7 @@ msgid "Entrepreneurship"
 msgstr "Girişimcilik"
 
 #: src/components/_economy/inventory/case/RarityChances.tsx:56
+#: src/components/_economy/inventory/ItemGridFilters.tsx:135
 #: src/components/_layout/LayoutOptions.tsx:232
 #: src/components/_user/user/WealthPanel.tsx:56
 #: src/pages/market/index.tsx:81
@@ -3948,6 +3991,10 @@ msgstr "Ekipman:"
 #: src/components/_economy/market/MarketHeader.tsx:20
 msgid "Equipments"
 msgstr "Ekipmanlar"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:246
+msgid "Equipped items are left out of select all."
+msgstr ""
 
 #: src/components/_political/law/GenericLawStatus.tsx:44
 msgid "Error"
@@ -4393,7 +4440,7 @@ msgstr ""
 msgid "General"
 msgstr "General"
 
-#: src/components/_user/mission/MissionsList.tsx:334
+#: src/components/_user/mission/MissionsList.tsx:351
 msgid "Generate Missions"
 msgstr "Görevler Oluştur"
 
@@ -4410,7 +4457,7 @@ msgstr "Özel bir <0>abone kostümü</0> alın!"
 msgid "Get multiple skins at once with a 30% discount!"
 msgstr "Birden fazla kostümü aynı anda %30 indirimle alın!"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:221
+#: src/components/_economy/inventory/DismantleModal.tsx:230
 msgid "Get supporter plan"
 msgstr "Destekçi planı al"
 
@@ -4961,6 +5008,7 @@ msgstr "Eşya satın alındı"
 msgid "Item Market"
 msgstr "Eşya Pazarı"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:191
 #: src/components/_user/user/WealthPanel.tsx:49
 msgid "Items"
 msgstr "Eşyalar"
@@ -5106,10 +5154,6 @@ msgstr ""
 #: src/components/_user/auth/WelcomeModal.tsx:152
 msgid "Language"
 msgstr "Dil"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:116
-msgid "Last"
-msgstr "Son"
 
 #: src/components/_user/user/UserHeader.tsx:358
 msgid "Last connection"
@@ -5335,6 +5379,10 @@ msgstr "Sınırlı:"
 msgid "Line"
 msgstr "Çizgi"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:297
+msgid "Listed at, taxes included"
+msgstr ""
+
 #: src/utils/translations.tsx:72
 msgid "Little cuties used to make steaks :("
 msgstr "Biftek yapmak için kullanılan minik tatlışlar :("
@@ -5405,10 +5453,6 @@ msgstr "Ganimet şansı"
 #: src/components/_user/notification/notification.frontConfig.tsx:2086
 msgid "Loot reward"
 msgstr "Ganimet ödülü"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:130
-msgid "Loots"
-msgstr "Ganimetler"
 
 #: src/components/_other/shop/skin.frontConfig.tsx:23
 msgid "Love Paper Jet"
@@ -5481,6 +5525,10 @@ msgstr ""
 #: src/pages/user/[userId]/account.tsx:26
 msgid "Market"
 msgstr "Pazar"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:205
+msgid "Market average"
+msgstr ""
 
 #: src/components/_political/country/CountryTaxes.tsx:24
 #: src/components/_political/law/LawFormModal.tsx:258
@@ -5811,7 +5859,7 @@ msgid "Mission tags"
 msgstr "Görev etiketleri"
 
 #: src/components/_user/mission/MissionsHeader.tsx:56
-#: src/components/_user/mission/MissionsList.tsx:232
+#: src/components/_user/mission/MissionsList.tsx:247
 #: src/components/_user/user/UserHeader.tsx:225
 msgid "Missions"
 msgstr "Görevler"
@@ -5854,7 +5902,7 @@ msgid "Money Won"
 msgstr "Para Kazanıldı"
 
 #: src/components/_military/mu/MuMemberList.tsx:191
-#: src/components/_user/mission/MissionsList.tsx:279
+#: src/components/_user/mission/MissionsList.tsx:294
 msgid "Monthly"
 msgstr "Aylık"
 
@@ -5862,7 +5910,7 @@ msgstr "Aylık"
 msgid "Monthly damages: <0>{monthlyDamages}</0>"
 msgstr "Aylık hasarlar: <0>{monthlyDamages}</0>"
 
-#: src/components/_user/mission/MissionsList.tsx:311
+#: src/components/_user/mission/MissionsList.tsx:328
 msgid "Monthly missions are not available yet"
 msgstr ""
 
@@ -6324,6 +6372,11 @@ msgstr "Henüz zemin sıralaması yok."
 msgid "No home region set"
 msgstr ""
 
+#: src/components/_economy/inventory/DismantleModal.tsx:263
+#: src/components/_economy/inventory/ItemSelectorModal.tsx:198
+msgid "No items found"
+msgstr ""
+
 #: src/components/_user/kits/KitsPopover.tsx:130
 msgid "No kits yet - add one to quick-equip a full loadout."
 msgstr "Henüz set yok - tam bir donanımı hızlıca kuşanmak için bir tane ekleyin."
@@ -6361,7 +6414,7 @@ msgstr ""
 msgid "No military units found"
 msgstr "Askeri birlik bulunamadı"
 
-#: src/components/_user/mission/MissionsList.tsx:313
+#: src/components/_user/mission/MissionsList.tsx:330
 msgid "No missions available"
 msgstr "Mevcut görev yok"
 
@@ -6433,6 +6486,10 @@ msgstr "İşlem bulunamadı"
 #: src/pages/country/[countryId]/wars.tsx:32
 msgid "No wars found"
 msgstr "Savaş bulunamadı"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:239
+msgid "No weapons or equipment to dismantle"
+msgstr ""
 
 #: src/components/_economy/workOffer/WorkOfferList.tsx:182
 msgid "No work offers"
@@ -6939,6 +6996,10 @@ msgstr "Telefon doğrulama gerekli"
 msgid "Pick a fight!"
 msgstr "Bir savaş seç!"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:217
+msgid "Pick up to {maxItemsPerListing} weapons or equipment in perfect condition to sell at the same price."
+msgstr ""
+
 #: src/utils/translations.tsx:117
 msgid "Pill"
 msgstr "Hap"
@@ -7091,6 +7152,10 @@ msgstr ""
 
 #: src/components/_user/notification/notification.frontConfig.tsx:2172
 msgid "Prestige!"
+msgstr ""
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:238
+msgid "Price"
 msgstr ""
 
 #: src/components/_economy/itemTrading/ItemTradingOrderFormModal.tsx:558
@@ -7291,8 +7356,8 @@ msgstr ""
 msgid "Put yourself to work!"
 msgstr "İşe başla!"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:198
-#: src/components/_economy/inventory/DismantleModal.tsx:288
+#: src/components/_economy/inventory/DismantleModal.tsx:46
+#: src/components/_economy/inventory/DismantleModal.tsx:306
 msgid "Quick dismantle"
 msgstr "Hızlı parçala"
 
@@ -7954,7 +8019,7 @@ msgstr "Tur"
 msgid "Round {0}"
 msgstr "Tur {0}"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:90
+#: src/components/_military/damageRanking/BattleLoot.tsx:61
 msgid "Round {roundNumber} loot pool"
 msgstr "Tur {roundNumber} ganimet havuzu"
 
@@ -7984,10 +8049,6 @@ msgstr "Tur tahmini süresi"
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:79
 msgid "Round Hero"
 msgstr "Tur Kahramanı"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:60
-msgid "Round loot"
-msgstr "Tur ganimetleri"
 
 #: src/components/_military/battle/BattleTimeline.tsx:78
 msgid "Rounds timeline"
@@ -8078,9 +8139,10 @@ msgstr "Konum seç"
 msgid "Select a region"
 msgstr "Bir bölge seçin"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:247
-msgid "Select all"
-msgstr "Tümünü seç"
+#. placeholder {0}: bulkItems.length
+#: src/components/_economy/inventory/DismantleModal.tsx:258
+msgid "Select all ({0})"
+msgstr ""
 
 #: src/components/_political/partyMotion/PartyMotionFormModal.tsx:141
 msgid "Select an occupied region"
@@ -8115,6 +8177,10 @@ msgstr "Kendi İşin"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:87
 msgid "Self work <0/> times in your companies"
+msgstr ""
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:77
+msgid "Sell an item"
 msgstr ""
 
 #: src/components/_economy/company/CompanyDropdown.tsx:332
@@ -8525,7 +8591,7 @@ msgstr "<0/>'da başladı"
 msgid "Started<0/><1/>"
 msgstr "Başladı<0/><1/>"
 
-#: src/components/_user/mission/MissionsList.tsx:292
+#: src/components/_user/mission/MissionsList.tsx:308
 msgid "Starting"
 msgstr "Başlıyor"
 
@@ -8621,11 +8687,16 @@ msgstr "Başarıyla giriş yapıldı!"
 msgid "Sugar Daddy"
 msgstr "Sugar Daddy"
 
+#. placeholder {0}: sharedRange.estimatedValue
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:253
+msgid "Suggested price <0>{0}</0>"
+msgstr ""
+
 #: src/components/_user/premium/PremiumActions.tsx:60
 msgid "Support the game"
 msgstr "Oyunu destekle"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:209
+#: src/components/_economy/inventory/DismantleModal.tsx:217
 msgid "Support the game and quickly dismantle items!"
 msgstr "Oyunu destekle ve eşyaları hızlıca parçala!"
 
@@ -8847,6 +8918,10 @@ msgstr ""
 msgid "The MU will receive the acceptance fee back, partial payout for damage done, and a 10% penalty fee of <0>{0}</0>. Are you sure?"
 msgstr "AB, kabul ücretini, yapılan hasar için kısmi ödemeyi ve <0>{0}</0> tutarında %10 ceza ücretini geri alacak. Emin misiniz?"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:136
+msgid "The price must be positive"
+msgstr ""
+
 #: src/components/_political/event/event.frontConfig.tsx:88
 msgid "The revolution in <0/> has been suppressed. The government remains in power."
 msgstr "<0/> bölgesindeki devrim bastırıldı. Hükümet iktidarda kalmaya devam ediyor."
@@ -8874,6 +8949,10 @@ msgstr "Evren sana büyük bir şey borçlu"
 #: src/components/_common/GameRules.tsx:117
 msgid "The use of bots, scripts, or any form of automation to gain an advantage over other players is strictly forbidden. This includes, but is not limited to, web scraping and creating scripts that bypass the game intended functionality or restrictions."
 msgstr "Botların, komut dosyalarının veya diğer oyunculara karşı avantaj elde etmek için her türlü otomasyonun kullanılması kesinlikle yasaktır. Bu, web kazıma ve oyunun amaçlanan işlevselliğini veya kısıtlamalarını atlayan komut dosyaları oluşturmayı içerir ancak bunlarla sınırlı değildir."
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:228
+msgid "These items have no authorized price in common. Remove the cheapest or the most valuable one."
+msgstr ""
 
 #: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:139
 msgid "This action will submit your MU bid for this contract."
@@ -9065,7 +9144,6 @@ msgstr "Fırtına Kitabı"
 msgid "Tome of Tides"
 msgstr "Gelgit Kitabı"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:124
 #: src/components/_social/ArticleList.tsx:209
 msgid "Top"
 msgstr "En İyi"
@@ -9383,7 +9461,7 @@ msgstr "Huzursuzluk"
 msgid "Unrest Contributors"
 msgstr "Huzursuzluğa Katkıda Bulunanlar"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:247
+#: src/components/_economy/inventory/DismantleModal.tsx:257
 msgid "Unselect all"
 msgstr "Seçimi kaldır"
 
@@ -9428,7 +9506,7 @@ msgstr "Becerileri Yükselt"
 msgid "Upgrade storage"
 msgstr "Depolamayı yükselt"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:205
+#: src/components/_economy/inventory/DismantleModal.tsx:213
 msgid "Upgrade to supporter"
 msgstr "Destekçi ol"
 
@@ -9813,6 +9891,7 @@ msgstr "Silah"
 msgid "Weapon:"
 msgstr "Silah:"
 
+#: src/components/_economy/inventory/ItemGridFilters.tsx:127
 #: src/components/_user/user/WealthPanel.tsx:63
 msgid "Weapons"
 msgstr "Silahlar"
@@ -9826,7 +9905,7 @@ msgid "Weapons, ammo and gear above this rarity cannot be used in this tournamen
 msgstr ""
 
 #: src/components/_military/mu/MuMemberList.tsx:192
-#: src/components/_user/mission/MissionsList.tsx:266
+#: src/components/_user/mission/MissionsList.tsx:281
 msgid "Weekly"
 msgstr "Haftalık"
 
@@ -10106,7 +10185,7 @@ msgstr "Dünyaya 10 bebek getirdin (>= seviye {0})"
 msgid "You can change it later."
 msgstr ""
 
-#: src/components/_economy/inventory/DismantleModal.tsx:211
+#: src/components/_economy/inventory/DismantleModal.tsx:219
 msgid "You can dismantle items from your inventory by selecting an item."
 msgstr "Bir eşya seçerek envanterindeki eşyaları parçalayabilirsin."
 
@@ -10256,6 +10335,10 @@ msgstr "3 ilke puanınızın tamamını harcamanız gerekiyor ({pointsRemaining}
 msgid "You need a country to take part"
 msgstr ""
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:177
+msgid "You need to be level {minLevel} to sell equipment"
+msgstr ""
+
 #: src/components/_user/UserEquipments.tsx:160
 msgid "You need to equip a weapon first"
 msgstr "Önce bir silah kuşanmalısın"
@@ -10270,6 +10353,18 @@ msgstr "<0/>'dan premium hediyen sona erdi! Abone olup oyunu desteklemeyi düş�
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:136
 msgid "You prestiged and lost your levels"
+msgstr ""
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:288
+msgid "You receive"
+msgstr ""
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:306
+msgid "You receive if all sell"
+msgstr ""
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:286
+msgid "You receive, per item"
 msgstr ""
 
 #. placeholder {0}: data.rank

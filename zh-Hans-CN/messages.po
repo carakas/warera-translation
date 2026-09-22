@@ -77,6 +77,11 @@ msgstr "(平均成员国发展度)"
 msgid "(own development)"
 msgstr "(自身发展度)"
 
+#. placeholder {0}: Math.max(items.length, 1)
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:327
+msgid "{0, plural, one {Put on sale} other {Put # items on sale}}"
+msgstr ""
+
 #. placeholder {0}: myCountry?.name
 #: src/components/_military/battle/EndedBattlesList.tsx:81
 msgid "{0} & allies"
@@ -161,7 +166,7 @@ msgstr "会从你给员工的薪资中扣除 {0}% 所得税"
 msgid "{0}% of invested"
 msgstr "投入的 {0}%"
 
-#: src/components/_user/mission/MissionsList.tsx:235
+#: src/components/_user/mission/MissionsList.tsx:250
 msgid "{completedCount}/{totalCount} completed"
 msgstr "{completedCount}/{totalCount} 已完成"
 
@@ -169,8 +174,16 @@ msgstr "{completedCount}/{totalCount} 已完成"
 msgid "{draftPrestigeCount} prestige point(s) on this skill ({savedPrestigeCount} saved, locked until reset)"
 msgstr ""
 
+#: src/components/_economy/inventory/DismantleModal.tsx:196
+msgid "{equippedCount, plural, one {# of them is equipped} other {# of them are equipped}}"
+msgstr ""
+
 #: src/components/_user/user/Level.tsx:126
 msgid "{nextLevelSkillPoints} Skill Points"
+msgstr ""
+
+#: src/components/_economy/inventory/DismantleModal.tsx:187
+msgid "{rareCount, plural, one {# of them is rare or better} other {# of them are rare or better}}"
 msgstr ""
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:167
@@ -198,6 +211,14 @@ msgstr ""
 #: src/components/_military/battle/RoundScore.tsx:50
 msgid "{score}/{0} Rounds"
 msgstr "{score}/{0} 回合"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:178
+msgid "{selectedCount, plural, one {Dismantle # item for} other {Dismantle # items for}}"
+msgstr ""
+
+#: src/components/_economy/inventory/DismantleModal.tsx:283
+msgid "{selectedCount} selected"
+msgstr ""
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:79
 msgid "{value} km"
@@ -804,14 +825,14 @@ msgid "<0>Emotes</0> in chat"
 msgstr "在聊天中使用 <0>表情符号</0> "
 
 #. placeholder {0}: ts.case2
-#: src/components/_military/damageRanking/BattleLoot.tsx:62
-msgid "<0>Every <1/> damage dealt in this round across both sides rolls an <2>{0}</2> into the round loot pool.</0><3>Round loot are distributed at the end of the round, top 1 damage dealer get top 1 item and so on...</3>"
-msgstr "<0>双方在本回合造成的每 <1/> 点伤害都会向本回合战利品池增加 <2>{0}</2>。</0><3>战利品会在回合结束时分配，伤害第 1 名获得第 1 件物品，以此类推...</3>"
+#: src/components/_military/damageRanking/BattleLoot.tsx:64
+msgid "<0>Every <1/> damage dealt in this round across both sides rolls an <2>{0}</2> into the round loot pool.</0><3>The pool is handed out at the end of the round: the top damage dealer gets the most valuable item, #2 the next one, and so on. The item you are in line for is shown on your row in the ranking below.</3>"
+msgstr ""
 
 #. placeholder {0}: ts.case2
-#: src/components/_military/damageRanking/BattleLoot.tsx:75
-msgid "<0>Every <1/> total damage dealt across both sides rolls an <2>{0}</2> into the battle loot pool.</0><3>Battle loot are distributed at the end of the battle, top 1 damage dealer get top 1 item and so on...</3>"
-msgstr "<0>双方累计造成的每 <1/> 点总伤害都会向战斗战利品池增加 <2>{0}</2>。</0><3>战利品会在战斗结束时分配，伤害第 1 名获得第 1 件物品，以此类推...</3>"
+#: src/components/_military/damageRanking/BattleLoot.tsx:79
+msgid "<0>Every <1/> total damage dealt across both sides rolls an <2>{0}</2> into the battle loot pool.</0><3>The pool is handed out at the end of the battle: the top damage dealer gets the most valuable item, #2 the next one, and so on. The item you are in line for is shown on your row in the ranking below.</3>"
+msgstr ""
 
 #. placeholder {0}: 1
 #. placeholder {1}: worker.fidelity
@@ -1469,6 +1490,8 @@ msgstr "高级裤子"
 msgid "Agrarian"
 msgstr "农业主义"
 
+#: src/components/_economy/inventory/ItemGridFilters.tsx:119
+#: src/components/_economy/inventory/ItemGridFilters.tsx:147
 #: src/components/_military/battle/ActiveBattlesList.tsx:134
 #: src/components/_military/battle/EndedBattlesList.tsx:78
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:79
@@ -1577,6 +1600,12 @@ msgstr "联盟名称"
 #: src/components/_military/battle/ActiveBattlesList.tsx:155
 msgid "Allies"
 msgstr "盟友"
+
+#. placeholder {0}: sharedRange.min
+#. placeholder {1}: sharedRange.max
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:139
+msgid "Allowed between {0} and {1}"
+msgstr ""
 
 #: src/components/_economy/workOffer/WageInfoAlert.tsx:48
 msgid "Allowed wage range:"
@@ -1963,7 +1992,7 @@ msgstr "自动化"
 msgid "Available in"
 msgstr ""
 
-#: src/components/_user/mission/MissionsList.tsx:322
+#: src/components/_user/mission/MissionsList.tsx:339
 msgid "Available now"
 msgstr ""
 
@@ -2098,11 +2127,7 @@ msgstr "{regionName} {score}"
 msgid "Battle Hero"
 msgstr "战斗英雄"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:60
-msgid "Battle loot"
-msgstr "战利品"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:90
+#: src/components/_military/damageRanking/BattleLoot.tsx:61
 msgid "Battle loot pool"
 msgstr "战利品池"
 
@@ -2628,6 +2653,11 @@ msgstr "已领取"
 msgid "Claimed so far"
 msgstr ""
 
+#: src/components/_economy/inventory/DismantleModal.tsx:294
+#: src/components/_economy/inventory/ItemSelectorModal.tsx:166
+msgid "Clear"
+msgstr ""
+
 #: src/components/_political/country/CountrySelectV2.tsx:278
 msgid "Clear selection"
 msgstr "清除选择"
@@ -2669,7 +2699,7 @@ msgstr "点击以选择提案"
 msgid "Climate"
 msgstr "气候"
 
-#: ../__ui/src/components/Modal/Modal.tsx:302
+#: ../__ui/src/components/Modal/Modal.tsx:316
 #: src/components/_political/map/MapMenu.tsx:247
 msgid "Close"
 msgstr "关闭"
@@ -3233,7 +3263,7 @@ msgstr "个性化用户名称字体"
 msgid "d. Any form of discrimination, racism, xenophobia, antisemitism, homophobia, transphobia and hate speech"
 msgstr "d. 任何形式的歧视、种族主义、排外、反犹、恐同、恐跨以及仇恨言论"
 
-#: src/components/_user/mission/MissionsList.tsx:253
+#: src/components/_user/mission/MissionsList.tsx:268
 msgid "Daily"
 msgstr "每日"
 
@@ -3633,6 +3663,10 @@ msgstr ""
 msgid "Dismantle Item"
 msgstr "拆解物品"
 
+#: src/components/_economy/inventory/DismantleModal.tsx:175
+msgid "Dismantle items"
+msgstr ""
+
 #: src/components/_user/apiToken/ApiTokenList.tsx:153
 msgid "Dismiss"
 msgstr "清除"
@@ -3646,7 +3680,7 @@ msgstr "解散联盟"
 msgid "Dissolve the alliance permanently, removing every member country."
 msgstr "永久解散联盟，移除所有成员国"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:97
+#: src/components/_military/damageRanking/BattleLoot.tsx:103
 msgid "Distributed"
 msgstr "已分配"
 
@@ -3720,6 +3754,10 @@ msgstr "Dragon"
 #: src/components/_common/GameRules.tsx:262
 msgid "e. Content about ongoing real-world wars and armed conflicts (most notably the Russo-Ukrainian war and the Israeli–Palestinian conflict)"
 msgstr "e. 关于现实世界正在进行的战争与武装冲突的内容(尤其是俄乌战争与巴以冲突)"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:211
+msgid "Each item gets its own offer, all at the same price."
+msgstr ""
 
 #: src/components/_user/user/SkillUpgrade.tsx:293
 msgid "Each prestige point gives the equivalent of {skillBonusLevels} level of the selected skill"
@@ -3917,6 +3955,10 @@ msgstr "能量"
 msgid "Ensign"
 msgstr "少尉"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:133
+msgid "Enter a price"
+msgstr ""
+
 #: src/components/_political/law/LawFormModal.tsx:244
 msgid "Enter article ID"
 msgstr "输入文章ID"
@@ -3932,6 +3974,7 @@ msgid "Entrepreneurship"
 msgstr "创业能力"
 
 #: src/components/_economy/inventory/case/RarityChances.tsx:56
+#: src/components/_economy/inventory/ItemGridFilters.tsx:135
 #: src/components/_layout/LayoutOptions.tsx:232
 #: src/components/_user/user/WealthPanel.tsx:56
 #: src/pages/market/index.tsx:81
@@ -3948,6 +3991,10 @@ msgstr "装备:"
 #: src/components/_economy/market/MarketHeader.tsx:20
 msgid "Equipments"
 msgstr "装备"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:246
+msgid "Equipped items are left out of select all."
+msgstr ""
 
 #: src/components/_political/law/GenericLawStatus.tsx:44
 msgid "Error"
@@ -4393,7 +4440,7 @@ msgstr ""
 msgid "General"
 msgstr "元帅"
 
-#: src/components/_user/mission/MissionsList.tsx:334
+#: src/components/_user/mission/MissionsList.tsx:351
 msgid "Generate Missions"
 msgstr "产生任务"
 
@@ -4410,7 +4457,7 @@ msgstr "获取专属的 <0>订阅者皮肤</0>！"
 msgid "Get multiple skins at once with a 30% discount!"
 msgstr "以 30% 折扣一次性购买多款皮肤!"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:221
+#: src/components/_economy/inventory/DismantleModal.tsx:230
 msgid "Get supporter plan"
 msgstr "获取支持者计划"
 
@@ -4961,6 +5008,7 @@ msgstr "已购买物品"
 msgid "Item Market"
 msgstr "物品市场"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:191
 #: src/components/_user/user/WealthPanel.tsx:49
 msgid "Items"
 msgstr "物品"
@@ -5106,10 +5154,6 @@ msgstr ""
 #: src/components/_user/auth/WelcomeModal.tsx:152
 msgid "Language"
 msgstr "语言"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:116
-msgid "Last"
-msgstr "最近"
 
 #: src/components/_user/user/UserHeader.tsx:358
 msgid "Last connection"
@@ -5335,6 +5379,10 @@ msgstr "限制:"
 msgid "Line"
 msgstr "线条"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:297
+msgid "Listed at, taxes included"
+msgstr ""
+
 #: src/utils/translations.tsx:72
 msgid "Little cuties used to make steaks :("
 msgstr "用来制作牛排的小可爱们 :("
@@ -5405,10 +5453,6 @@ msgstr "获取战利品机率"
 #: src/components/_user/notification/notification.frontConfig.tsx:2086
 msgid "Loot reward"
 msgstr "战利品奖励"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:130
-msgid "Loots"
-msgstr "战利品"
 
 #: src/components/_other/shop/skin.frontConfig.tsx:23
 msgid "Love Paper Jet"
@@ -5481,6 +5525,10 @@ msgstr ""
 #: src/pages/user/[userId]/account.tsx:26
 msgid "Market"
 msgstr "市场"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:205
+msgid "Market average"
+msgstr ""
 
 #: src/components/_political/country/CountryTaxes.tsx:24
 #: src/components/_political/law/LawFormModal.tsx:258
@@ -5811,7 +5859,7 @@ msgid "Mission tags"
 msgstr ""
 
 #: src/components/_user/mission/MissionsHeader.tsx:56
-#: src/components/_user/mission/MissionsList.tsx:232
+#: src/components/_user/mission/MissionsList.tsx:247
 #: src/components/_user/user/UserHeader.tsx:225
 msgid "Missions"
 msgstr "任务"
@@ -5854,7 +5902,7 @@ msgid "Money Won"
 msgstr "推荐奖励"
 
 #: src/components/_military/mu/MuMemberList.tsx:191
-#: src/components/_user/mission/MissionsList.tsx:279
+#: src/components/_user/mission/MissionsList.tsx:294
 msgid "Monthly"
 msgstr "每月"
 
@@ -5862,7 +5910,7 @@ msgstr "每月"
 msgid "Monthly damages: <0>{monthlyDamages}</0>"
 msgstr "每月伤害:<0>{monthlyDamages}</0>"
 
-#: src/components/_user/mission/MissionsList.tsx:311
+#: src/components/_user/mission/MissionsList.tsx:328
 msgid "Monthly missions are not available yet"
 msgstr ""
 
@@ -6324,6 +6372,11 @@ msgstr "还没有地面控制点排名。"
 msgid "No home region set"
 msgstr ""
 
+#: src/components/_economy/inventory/DismantleModal.tsx:263
+#: src/components/_economy/inventory/ItemSelectorModal.tsx:198
+msgid "No items found"
+msgstr ""
+
 #: src/components/_user/kits/KitsPopover.tsx:130
 msgid "No kits yet - add one to quick-equip a full loadout."
 msgstr ""
@@ -6361,7 +6414,7 @@ msgstr ""
 msgid "No military units found"
 msgstr "没有找到军团"
 
-#: src/components/_user/mission/MissionsList.tsx:313
+#: src/components/_user/mission/MissionsList.tsx:330
 msgid "No missions available"
 msgstr "没有任务可用"
 
@@ -6433,6 +6486,10 @@ msgstr "找不到交易记录"
 #: src/pages/country/[countryId]/wars.tsx:32
 msgid "No wars found"
 msgstr "找不到战争"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:239
+msgid "No weapons or equipment to dismantle"
+msgstr ""
 
 #: src/components/_economy/workOffer/WorkOfferList.tsx:182
 msgid "No work offers"
@@ -6939,6 +6996,10 @@ msgstr "需要手机验证"
 msgid "Pick a fight!"
 msgstr "选择一个战斗！"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:217
+msgid "Pick up to {maxItemsPerListing} weapons or equipment in perfect condition to sell at the same price."
+msgstr ""
+
 #: src/utils/translations.tsx:117
 msgid "Pill"
 msgstr "药丸"
@@ -7091,6 +7152,10 @@ msgstr ""
 
 #: src/components/_user/notification/notification.frontConfig.tsx:2172
 msgid "Prestige!"
+msgstr ""
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:238
+msgid "Price"
 msgstr ""
 
 #: src/components/_economy/itemTrading/ItemTradingOrderFormModal.tsx:558
@@ -7291,8 +7356,8 @@ msgstr ""
 msgid "Put yourself to work!"
 msgstr "开始工作吧！"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:198
-#: src/components/_economy/inventory/DismantleModal.tsx:288
+#: src/components/_economy/inventory/DismantleModal.tsx:46
+#: src/components/_economy/inventory/DismantleModal.tsx:306
 msgid "Quick dismantle"
 msgstr "快速拆解"
 
@@ -7954,7 +8019,7 @@ msgstr "回合"
 msgid "Round {0}"
 msgstr "回合 {0}"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:90
+#: src/components/_military/damageRanking/BattleLoot.tsx:61
 msgid "Round {roundNumber} loot pool"
 msgstr "回合 {roundNumber} 战利品池"
 
@@ -7984,10 +8049,6 @@ msgstr "回合预计结束时间"
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:79
 msgid "Round Hero"
 msgstr "回合英雄"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:60
-msgid "Round loot"
-msgstr "回合战利品"
 
 #: src/components/_military/battle/BattleTimeline.tsx:78
 msgid "Rounds timeline"
@@ -8078,9 +8139,10 @@ msgstr "选择一个地点"
 msgid "Select a region"
 msgstr "选择一个地区"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:247
-msgid "Select all"
-msgstr "全选"
+#. placeholder {0}: bulkItems.length
+#: src/components/_economy/inventory/DismantleModal.tsx:258
+msgid "Select all ({0})"
+msgstr ""
 
 #: src/components/_political/partyMotion/PartyMotionFormModal.tsx:141
 msgid "Select an occupied region"
@@ -8115,6 +8177,10 @@ msgstr "在自己公司工作"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:87
 msgid "Self work <0/> times in your companies"
+msgstr ""
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:77
+msgid "Sell an item"
 msgstr ""
 
 #: src/components/_economy/company/CompanyDropdown.tsx:332
@@ -8525,7 +8591,7 @@ msgstr "开始于 <0/>"
 msgid "Started<0/><1/>"
 msgstr "已开始<0/><1/>"
 
-#: src/components/_user/mission/MissionsList.tsx:292
+#: src/components/_user/mission/MissionsList.tsx:308
 msgid "Starting"
 msgstr "新手任务"
 
@@ -8621,11 +8687,16 @@ msgstr "成功登入！"
 msgid "Sugar Daddy"
 msgstr "金主"
 
+#. placeholder {0}: sharedRange.estimatedValue
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:253
+msgid "Suggested price <0>{0}</0>"
+msgstr ""
+
 #: src/components/_user/premium/PremiumActions.tsx:60
 msgid "Support the game"
 msgstr "支持这个游戏"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:209
+#: src/components/_economy/inventory/DismantleModal.tsx:217
 msgid "Support the game and quickly dismantle items!"
 msgstr "支持这个游戏，且可以快速拆解物品"
 
@@ -8847,6 +8918,10 @@ msgstr ""
 msgid "The MU will receive the acceptance fee back, partial payout for damage done, and a 10% penalty fee of <0>{0}</0>. Are you sure?"
 msgstr "军团将取回接受手续费、获得按造成伤害计算的部分支付，并需支付 <0>{0}</0> 的 10% 罚金。确定吗？"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:136
+msgid "The price must be positive"
+msgstr ""
+
 #: src/components/_political/event/event.frontConfig.tsx:88
 msgid "The revolution in <0/> has been suppressed. The government remains in power."
 msgstr "在 <0/> 的革命已被镇压。政府维持了他的权力。"
@@ -8874,6 +8949,10 @@ msgstr "整个宇宙欠了你一份人情"
 #: src/components/_common/GameRules.tsx:117
 msgid "The use of bots, scripts, or any form of automation to gain an advantage over other players is strictly forbidden. This includes, but is not limited to, web scraping and creating scripts that bypass the game intended functionality or restrictions."
 msgstr "严禁使用机器人、脚本或任何形式的自动化来获得对其他玩家的优势，包括但不限于网页抓取，以及绕过游戏设计功能或限制的脚本。"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:228
+msgid "These items have no authorized price in common. Remove the cheapest or the most valuable one."
+msgstr ""
 
 #: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:139
 msgid "This action will submit your MU bid for this contract."
@@ -9065,7 +9144,6 @@ msgstr "Tome of Storms"
 msgid "Tome of Tides"
 msgstr "Tome of Tides"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:124
 #: src/components/_social/ArticleList.tsx:209
 msgid "Top"
 msgstr "热门"
@@ -9383,7 +9461,7 @@ msgstr "动荡值"
 msgid "Unrest Contributors"
 msgstr "动荡值贡献者"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:247
+#: src/components/_economy/inventory/DismantleModal.tsx:257
 msgid "Unselect all"
 msgstr "取消全选"
 
@@ -9428,7 +9506,7 @@ msgstr "升级技能"
 msgid "Upgrade storage"
 msgstr ""
 
-#: src/components/_economy/inventory/DismantleModal.tsx:205
+#: src/components/_economy/inventory/DismantleModal.tsx:213
 msgid "Upgrade to supporter"
 msgstr "升级为支持者"
 
@@ -9813,6 +9891,7 @@ msgstr "武器"
 msgid "Weapon:"
 msgstr "武器:"
 
+#: src/components/_economy/inventory/ItemGridFilters.tsx:127
 #: src/components/_user/user/WealthPanel.tsx:63
 msgid "Weapons"
 msgstr "武器"
@@ -9826,7 +9905,7 @@ msgid "Weapons, ammo and gear above this rarity cannot be used in this tournamen
 msgstr ""
 
 #: src/components/_military/mu/MuMemberList.tsx:192
-#: src/components/_user/mission/MissionsList.tsx:266
+#: src/components/_user/mission/MissionsList.tsx:281
 msgid "Weekly"
 msgstr "每周"
 
@@ -10106,7 +10185,7 @@ msgstr "你带来了 10 个宝宝(>={0}级)"
 msgid "You can change it later."
 msgstr ""
 
-#: src/components/_economy/inventory/DismantleModal.tsx:211
+#: src/components/_economy/inventory/DismantleModal.tsx:219
 msgid "You can dismantle items from your inventory by selecting an item."
 msgstr "你可以在仓库中通过选取装备来拆解装备。"
 
@@ -10256,6 +10335,10 @@ msgstr "你必须花费所有 3 点政策点数 (剩余 {pointsRemaining})"
 msgid "You need a country to take part"
 msgstr ""
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:177
+msgid "You need to be level {minLevel} to sell equipment"
+msgstr ""
+
 #: src/components/_user/UserEquipments.tsx:160
 msgid "You need to equip a weapon first"
 msgstr "你需要先装备一件武器"
@@ -10270,6 +10353,18 @@ msgstr "<0/> 赠送给你的高级订阅已到期，有考虑订阅和赞助本�
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:136
 msgid "You prestiged and lost your levels"
+msgstr ""
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:288
+msgid "You receive"
+msgstr ""
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:306
+msgid "You receive if all sell"
+msgstr ""
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:286
+msgid "You receive, per item"
 msgstr ""
 
 #. placeholder {0}: data.rank

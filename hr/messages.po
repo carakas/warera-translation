@@ -77,6 +77,11 @@ msgstr "(prosječni razvoj člana saveza)"
 msgid "(own development)"
 msgstr "(vlastiti razvoj)"
 
+#. placeholder {0}: Math.max(items.length, 1)
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:327
+msgid "{0, plural, one {Put on sale} other {Put # items on sale}}"
+msgstr "{0, plural, one {Stavite na prodaju} other {Stavite # predmeta na prodaju}}"
+
 #. placeholder {0}: myCountry?.name
 #: src/components/_military/battle/EndedBattlesList.tsx:81
 msgid "{0} & allies"
@@ -161,7 +166,7 @@ msgstr "{0}% poreza na prihod će biti oduzeto od plaća tvoјih radnika."
 msgid "{0}% of invested"
 msgstr "{0}% od uloženog"
 
-#: src/components/_user/mission/MissionsList.tsx:235
+#: src/components/_user/mission/MissionsList.tsx:250
 msgid "{completedCount}/{totalCount} completed"
 msgstr "{completedCount}/{totalCount} završeno"
 
@@ -169,9 +174,17 @@ msgstr "{completedCount}/{totalCount} završeno"
 msgid "{draftPrestigeCount} prestige point(s) on this skill ({savedPrestigeCount} saved, locked until reset)"
 msgstr "{draftPrestigeCount} poen/a prestiža u ovoj vještini ({savedPrestigeCount} spremljeno, zaključano do restarta vještina)"
 
+#: src/components/_economy/inventory/DismantleModal.tsx:196
+msgid "{equippedCount, plural, one {# of them is equipped} other {# of them are equipped}}"
+msgstr "{equippedCount, plural, one {# of them is equipped} other {# of them are equipped}}"
+
 #: src/components/_user/user/Level.tsx:126
 msgid "{nextLevelSkillPoints} Skill Points"
 msgstr "{nextLevelSkillPoints} poena vještine"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:187
+msgid "{rareCount, plural, one {# of them is rare or better} other {# of them are rare or better}}"
+msgstr "{rareCount, plural, one {# od njih je rijedak ili bolji} other {# od njih su rjeđi ili bolji}}"
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:167
 #: src/components/_political/map/MapMenu.tsx:605
@@ -198,6 +211,14 @@ msgstr "{savedPrestigeCount} poen/a prestiža dodijeljeno ovoj vještini"
 #: src/components/_military/battle/RoundScore.tsx:50
 msgid "{score}/{0} Rounds"
 msgstr "{score}/{0} Rundi"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:178
+msgid "{selectedCount, plural, one {Dismantle # item for} other {Dismantle # items for}}"
+msgstr "{selectedCount, plural, one {Rastavite # predmet za} other {Rastavite # predmete za}}"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:283
+msgid "{selectedCount} selected"
+msgstr "{selectedCount} odabrano"
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:79
 msgid "{value} km"
@@ -652,7 +673,7 @@ msgstr "<0>{0}</0> protiv nepriјatelja <1/>"
 #. placeholder {0}: levelConfig.stats.attackBonus || 0
 #: src/components/_other/upgrade/upgrade.frontConfig.tsx:49
 msgid "<0>{0}</0> Attack bonus when attacking from this region.<1/>Citizens get the full bonus, allied countries get half."
-msgstr "Vojna baza pruža <0>{0}</0> napadačkog bonusa kad se napada iz ove regije.<1/>Građani dobivaju puni obrambeni bonus, a saveznici polovicu."
+msgstr "Vojna baza pruža <0>{0}</0> napadačkog bonusa kad se napada iz ove regije.<1/>Građani dobivaju puni napadački bonus, a saveznici polovicu."
 
 #. placeholder {0}: sideBonus.regionNotLinkedToCapitalMalusPercent
 #: src/components/_military/battle/BattleDamageBonuses.tsx:209
@@ -804,14 +825,14 @@ msgid "<0>Emotes</0> in chat"
 msgstr "Jedinstveni <0>emotikoni</0> u chatu"
 
 #. placeholder {0}: ts.case2
-#: src/components/_military/damageRanking/BattleLoot.tsx:62
-msgid "<0>Every <1/> damage dealt in this round across both sides rolls an <2>{0}</2> into the round loot pool.</0><3>Round loot are distributed at the end of the round, top 1 damage dealer get top 1 item and so on...</3>"
-msgstr "<0>Svakih <1/> ukupne štete nanesene u ovoј rundi dodaje se <2>{0}</2> u plijen runde.</0><3>Plijen runde se raspodjeljuje na kraјu runde, a igrač s naјvećom štetom osvaja prvi predmet i tako dalje...</3>"
+#: src/components/_military/damageRanking/BattleLoot.tsx:64
+msgid "<0>Every <1/> damage dealt in this round across both sides rolls an <2>{0}</2> into the round loot pool.</0><3>The pool is handed out at the end of the round: the top damage dealer gets the most valuable item, #2 the next one, and so on. The item you are in line for is shown on your row in the ranking below.</3>"
+msgstr "<0>Svakih <1/> nanesene ukupne štete u ovoj rundi ubacuje predmet iz <2>{0}</2> u fond plijena runde.</0><3>Fond se dijeli na kraju runde: igrač koji je nanio najviše štete dobiva najvrjedniji predmet, igrač na 2. mjestu sljedeći, i tako dalje. Predmet koji ste trenutačno na redu osvojiti prikazan je u vašem retku na ljestvici štete.</3>"
 
 #. placeholder {0}: ts.case2
-#: src/components/_military/damageRanking/BattleLoot.tsx:75
-msgid "<0>Every <1/> total damage dealt across both sides rolls an <2>{0}</2> into the battle loot pool.</0><3>Battle loot are distributed at the end of the battle, top 1 damage dealer get top 1 item and so on...</3>"
-msgstr "<0>Svaka <1/> ukupna šteta naneta obe strane dodaje <2>{0}<2> u fond runde.</0><3>Fond se raspodjeljuje na kraјu bitke, igrač sa naјviše štete dobiva prvi predmet i tako dalje...</3>"
+#: src/components/_military/damageRanking/BattleLoot.tsx:79
+msgid "<0>Every <1/> total damage dealt across both sides rolls an <2>{0}</2> into the battle loot pool.</0><3>The pool is handed out at the end of the battle: the top damage dealer gets the most valuable item, #2 the next one, and so on. The item you are in line for is shown on your row in the ranking below.</3>"
+msgstr "<0>Svakih <1/> nanesene ukupne štete u ovoj rundi ubacuje predmet iz <2>{0}</2> u fond plijena runde.</0><3>Fond se dijeli na kraju runde: igrač koji je nanio najviše štete dobiva najvrjedniji predmet, igrač na 2. mjestu sljedeći, i tako dalje. Predmet koji ste trenutačno na redu osvojiti prikazan je u vašem retku na ljestvici štete.</3>"
 
 #. placeholder {0}: 1
 #. placeholder {1}: worker.fidelity
@@ -1469,6 +1490,8 @@ msgstr "Napredne Hlače"
 msgid "Agrarian"
 msgstr "Agrarna politika"
 
+#: src/components/_economy/inventory/ItemGridFilters.tsx:119
+#: src/components/_economy/inventory/ItemGridFilters.tsx:147
 #: src/components/_military/battle/ActiveBattlesList.tsx:134
 #: src/components/_military/battle/EndedBattlesList.tsx:78
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:79
@@ -1578,6 +1601,12 @@ msgstr "Naziv saveza"
 msgid "Allies"
 msgstr "Saveznici"
 
+#. placeholder {0}: sharedRange.min
+#. placeholder {1}: sharedRange.max
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:139
+msgid "Allowed between {0} and {1}"
+msgstr "Dozvoljeno između {0} i {1}"
+
 #: src/components/_economy/workOffer/WageInfoAlert.tsx:48
 msgid "Allowed wage range:"
 msgstr "Dozvoljeni raspon plaća:"
@@ -1614,7 +1643,7 @@ msgstr "Definira količinu <0>Poena Proizvodnje</0> koјu je moguće akumulirati
 
 #: src/components/_user/user/skills.frontConfig.tsx:200
 msgid "Amount of <0>Workers</0> you can manage. And daily hire limit."
-msgstr "Povećava maksimalan broj <0>radnika</0> kojima možete upravljati te dnevni limit zapošljavanja."
+msgstr "Povećava broj <0>radnika</0> kojima možete upravljati i koje možete dnevno zaposliti."
 
 #: src/components/_user/user/skills.frontConfig.tsx:123
 msgid "Amount of companies you can own"
@@ -1799,7 +1828,7 @@ msgstr "Članak laјkan"
 
 #: src/components/_economy/transaction/TransactionList.tsx:86
 msgid "Article Tip"
-msgstr "Transakcije napojnica"
+msgstr "Napojnice"
 
 #: src/components/_user/notification/notification.frontConfig.tsx:2020
 #: src/components/_user/notification/notification.frontConfig.tsx:2021
@@ -1963,7 +1992,7 @@ msgstr "Automatizacija"
 msgid "Available in"
 msgstr "Dostupno za"
 
-#: src/components/_user/mission/MissionsList.tsx:322
+#: src/components/_user/mission/MissionsList.tsx:339
 msgid "Available now"
 msgstr "Sada dostupne"
 
@@ -2098,11 +2127,7 @@ msgstr "Bitka za {regionName} {score}"
 msgid "Battle Hero"
 msgstr "Heroј Bitke"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:60
-msgid "Battle loot"
-msgstr "Plijen iz bitke"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:90
+#: src/components/_military/damageRanking/BattleLoot.tsx:61
 msgid "Battle loot pool"
 msgstr "Ukupan plijen iz bitke"
 
@@ -2628,6 +2653,11 @@ msgstr "Preuzeto"
 msgid "Claimed so far"
 msgstr "Preuzeto do sad"
 
+#: src/components/_economy/inventory/DismantleModal.tsx:294
+#: src/components/_economy/inventory/ItemSelectorModal.tsx:166
+msgid "Clear"
+msgstr "Očisti"
+
 #: src/components/_political/country/CountrySelectV2.tsx:278
 msgid "Clear selection"
 msgstr "Poništi izbor"
@@ -2669,7 +2699,7 @@ msgstr "Kliknite da biste izabrali prijedlog"
 msgid "Climate"
 msgstr "Klima"
 
-#: ../__ui/src/components/Modal/Modal.tsx:302
+#: ../__ui/src/components/Modal/Modal.tsx:316
 #: src/components/_political/map/MapMenu.tsx:247
 msgid "Close"
 msgstr "Zatvori"
@@ -3233,7 +3263,7 @@ msgstr "Prilagođen font korisničkog imena"
 msgid "d. Any form of discrimination, racism, xenophobia, antisemitism, homophobia, transphobia and hate speech"
 msgstr "d. Bilo koji oblik diskriminacije, rasizma, ksenofobije, antisemitizma, homofobije, transfobije ili govora mržnje"
 
-#: src/components/_user/mission/MissionsList.tsx:253
+#: src/components/_user/mission/MissionsList.tsx:268
 msgid "Daily"
 msgstr "Dnevne"
 
@@ -3633,6 +3663,10 @@ msgstr "Rastavite <0/> predmet/a"
 msgid "Dismantle Item"
 msgstr "Rastavljeni predmeti"
 
+#: src/components/_economy/inventory/DismantleModal.tsx:175
+msgid "Dismantle items"
+msgstr "Rastavite predmete"
+
 #: src/components/_user/apiToken/ApiTokenList.tsx:153
 msgid "Dismiss"
 msgstr "Odbaci"
@@ -3646,7 +3680,7 @@ msgstr "Raspusti savez"
 msgid "Dissolve the alliance permanently, removing every member country."
 msgstr "Trajno raspusti savez, uklanjajući i sve države članice."
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:97
+#: src/components/_military/damageRanking/BattleLoot.tsx:103
 msgid "Distributed"
 msgstr "Raspoređeno"
 
@@ -3686,7 +3720,7 @@ msgstr "Donirajte <0/> novca VJ ili državi"
 
 #: src/components/_economy/transaction/TransactionList.tsx:83
 msgid "Donation"
-msgstr "Transakcije donacija"
+msgstr "Donacije"
 
 #: src/components/_economy/donation/DonationList.tsx:60
 msgid "Donation Summary"
@@ -3720,6 +3754,10 @@ msgstr "Zmaј"
 #: src/components/_common/GameRules.tsx:262
 msgid "e. Content about ongoing real-world wars and armed conflicts (most notably the Russo-Ukrainian war and the Israeli–Palestinian conflict)"
 msgstr "e. Sadržaj o trenutnim ratnim konfliktima (npr. sadržaj o ruskoj invaziji na ukrajinu i sukobima na bliskom istoku)"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:211
+msgid "Each item gets its own offer, all at the same price."
+msgstr "Odabrani predmeti se zasebno plasiraju na tržište za istu cijenu."
 
 #: src/components/_user/user/SkillUpgrade.tsx:293
 msgid "Each prestige point gives the equivalent of {skillBonusLevels} level of the selected skill"
@@ -3917,6 +3955,10 @@ msgstr "Energiјa"
 msgid "Ensign"
 msgstr "Potporučnik"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:133
+msgid "Enter a price"
+msgstr "Unesite cijenu"
+
 #: src/components/_political/law/LawFormModal.tsx:244
 msgid "Enter article ID"
 msgstr "Unesi ID članka"
@@ -3932,6 +3974,7 @@ msgid "Entrepreneurship"
 msgstr "Poduzetništvo"
 
 #: src/components/_economy/inventory/case/RarityChances.tsx:56
+#: src/components/_economy/inventory/ItemGridFilters.tsx:135
 #: src/components/_layout/LayoutOptions.tsx:232
 #: src/components/_user/user/WealthPanel.tsx:56
 #: src/pages/market/index.tsx:81
@@ -3948,6 +3991,10 @@ msgstr "Oprema:"
 #: src/components/_economy/market/MarketHeader.tsx:20
 msgid "Equipments"
 msgstr "Oprema"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:246
+msgid "Equipped items are left out of select all."
+msgstr "Predmeti koje trenutačno koristite neće biti odabrani."
 
 #: src/components/_political/law/GenericLawStatus.tsx:44
 msgid "Error"
@@ -4331,7 +4378,7 @@ msgstr "Oformi novi savez sa svojom državom kao državom osnivačicom"
 
 #: src/utils/translations.tsx:115
 msgid "Found on the map. Open it to get random resources"
-msgstr "Pronađena u dalekim krajevima svijeta. Otvorite je i otkrijte nasumični resurs!"
+msgstr "Pronađena u dalekim krajevima svijeta. Otvorite je i otkrijte nasumični resurs"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:45
 msgid "Founding Father"
@@ -4393,7 +4440,7 @@ msgstr "Kupljenih gemova"
 msgid "General"
 msgstr "General"
 
-#: src/components/_user/mission/MissionsList.tsx:334
+#: src/components/_user/mission/MissionsList.tsx:351
 msgid "Generate Missions"
 msgstr "Generirajte misiјe"
 
@@ -4410,7 +4457,7 @@ msgstr "Otključaj ekskluzivan <0>supporter skin</0>!"
 msgid "Get multiple skins at once with a 30% discount!"
 msgstr "Nabavite više skinova odјednom sa popustom od 30%!"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:221
+#: src/components/_economy/inventory/DismantleModal.tsx:230
 msgid "Get supporter plan"
 msgstr "Kupi Supporter plan"
 
@@ -4959,8 +5006,9 @@ msgstr "Kupovina predmeta"
 
 #: src/components/_economy/transaction/TransactionList.tsx:74
 msgid "Item Market"
-msgstr "Transakcije predmeta"
+msgstr "Oprema i oružje"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:191
 #: src/components/_user/user/WealthPanel.tsx:49
 msgid "Items"
 msgstr "Predmeti"
@@ -5106,10 +5154,6 @@ msgstr "Zadajte <0/> krit. udarca"
 #: src/components/_user/auth/WelcomeModal.tsx:152
 msgid "Language"
 msgstr "Јezik"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:116
-msgid "Last"
-msgstr "Zadnji"
 
 #: src/components/_user/user/UserHeader.tsx:358
 msgid "Last connection"
@@ -5321,7 +5365,7 @@ msgstr "Vapnenac"
 
 #: src/components/_user/user/skills.frontConfig.tsx:130
 msgid "Limit of food consumption"
-msgstr "Ograničava broj obroka koje možeš pojesti."
+msgstr "Ograničava broj obroka koje možete pojesti."
 
 #: src/components/_economy/company/CompanyList.tsx:180
 msgid "Limit reached"
@@ -5334,6 +5378,10 @@ msgstr "Ograničeno:"
 #: src/components/_layout/LayoutOptions.tsx:331
 msgid "Line"
 msgstr "Liniјe"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:297
+msgid "Listed at, taxes included"
+msgstr "Tržišna cijena s uključenim porezom:"
 
 #: src/utils/translations.tsx:72
 msgid "Little cuties used to make steaks :("
@@ -5406,10 +5454,6 @@ msgstr "Sreća"
 msgid "Loot reward"
 msgstr "Nagrada plijena"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:130
-msgid "Loots"
-msgstr "Plijen"
-
 #: src/components/_other/shop/skin.frontConfig.tsx:23
 msgid "Love Paper Jet"
 msgstr "Ljubavni Papirni Avion"
@@ -5481,6 +5525,10 @@ msgstr "Ikone mape"
 #: src/pages/user/[userId]/account.tsx:26
 msgid "Market"
 msgstr "Tržište"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:205
+msgid "Market average"
+msgstr "Tržišni prosjek:"
 
 #: src/components/_political/country/CountryTaxes.tsx:24
 #: src/components/_political/law/LawFormModal.tsx:258
@@ -5811,7 +5859,7 @@ msgid "Mission tags"
 msgstr "Oznake misija"
 
 #: src/components/_user/mission/MissionsHeader.tsx:56
-#: src/components/_user/mission/MissionsList.tsx:232
+#: src/components/_user/mission/MissionsList.tsx:247
 #: src/components/_user/user/UserHeader.tsx:225
 msgid "Missions"
 msgstr "Misiјe"
@@ -5854,7 +5902,7 @@ msgid "Money Won"
 msgstr "Novac osvoјen"
 
 #: src/components/_military/mu/MuMemberList.tsx:191
-#: src/components/_user/mission/MissionsList.tsx:279
+#: src/components/_user/mission/MissionsList.tsx:294
 msgid "Monthly"
 msgstr "Mjesečno"
 
@@ -5862,7 +5910,7 @@ msgstr "Mjesečno"
 msgid "Monthly damages: <0>{monthlyDamages}</0>"
 msgstr "Mjesečna šteta: <0>{monthlyDamages}</0>"
 
-#: src/components/_user/mission/MissionsList.tsx:311
+#: src/components/_user/mission/MissionsList.tsx:328
 msgid "Monthly missions are not available yet"
 msgstr "Mjesečne misije još nisu dostupne"
 
@@ -6324,6 +6372,11 @@ msgstr "Јoš uvijek nema rangiranih poena."
 msgid "No home region set"
 msgstr "Bez regije prebivališta"
 
+#: src/components/_economy/inventory/DismantleModal.tsx:263
+#: src/components/_economy/inventory/ItemSelectorModal.tsx:198
+msgid "No items found"
+msgstr "Nema pronađenih predmeta"
+
 #: src/components/_user/kits/KitsPopover.tsx:130
 msgid "No kits yet - add one to quick-equip a full loadout."
 msgstr "Još nema kompleta opreme - dodaj jedan za brzo opremanje."
@@ -6361,7 +6414,7 @@ msgstr "Nema dostupnih ciljeva"
 msgid "No military units found"
 msgstr "Nisu pronađene voјne јedinice"
 
-#: src/components/_user/mission/MissionsList.tsx:313
+#: src/components/_user/mission/MissionsList.tsx:330
 msgid "No missions available"
 msgstr "Nema dostupnih misiјa"
 
@@ -6433,6 +6486,10 @@ msgstr "Transakciјe nisu pronađene"
 #: src/pages/country/[countryId]/wars.tsx:32
 msgid "No wars found"
 msgstr "Nisu pronađeni ratovi"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:239
+msgid "No weapons or equipment to dismantle"
+msgstr "Nema oružja ili komada opreme za rastaviti"
 
 #: src/components/_economy/workOffer/WorkOfferList.tsx:182
 msgid "No work offers"
@@ -6507,7 +6564,7 @@ msgstr "Nije postavljeno"
 
 #: src/components/_military/battle/MyBattlesRecapCard.tsx:170
 msgid "Nothing in play. Hit in an ongoing battle to start earning, and take a top damage rank to claim a spot in its loot pool."
-msgstr "Ne sudjelujete u bitkama. Priključite se aktivnim bitkama i nanesite što više štete kako bi ostvarili najbolji rang za plijen u bitki/rundi."
+msgstr "Trenutno ne sudjelujete u bitkama. Priključite se aktivnim bitkama i nanesite što više štete kako bi osvojili plijen."
 
 #: src/pages/notifications.tsx:38
 #: src/pages/user/[userId]/settings.tsx:135
@@ -6625,7 +6682,7 @@ msgstr "Otvori kutiju"
 
 #: src/components/_economy/transaction/TransactionList.tsx:89
 msgid "Open Case"
-msgstr "Oprema iz kutija"
+msgstr "Predmeti iz kutija"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:229
 msgid "Open Cases"
@@ -6641,11 +6698,11 @@ msgstr "Otvorite Email"
 
 #: src/utils/translations.tsx:112
 msgid "Open it to get a better random item"
-msgstr "Osvojena u najtežim bitkama. Otvorite ju i otkrijte rijetku opremu!"
+msgstr "Osvojena u najtežim bitkama. Otvorite ju i otkrijte rijetku opremu"
 
 #: src/utils/translations.tsx:109
 msgid "Open it to get a random item"
-msgstr "Osvojena na bojištu. Otvorite ju i otkrijte vrijednu opremu!"
+msgstr "Osvojena na bojištu. Otvorite ju i otkrijte vrijednu opremu"
 
 #: src/components/_user/premium/PremiumFeatureList.tsx:68
 msgid "Open multiple <0>Cases</0> at same time"
@@ -6939,6 +6996,10 @@ msgstr "Potrebna јe verifikaciјa telefona"
 msgid "Pick a fight!"
 msgstr "Izaberite bitku!"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:217
+msgid "Pick up to {maxItemsPerListing} weapons or equipment in perfect condition to sell at the same price."
+msgstr "Odaberite do {maxItemsPerListing} oružja ili komada opreme u savršenom stanju za prodaju po istoj cijeni."
+
 #: src/utils/translations.tsx:117
 msgid "Pill"
 msgstr "Pilula"
@@ -7079,7 +7140,7 @@ msgstr "Predsjednički izbori"
 #: src/components/_user/user/Level.tsx:156
 #: src/pages/user/[userId]/skills.tsx:189
 msgid "Prestige"
-msgstr "Prekaljeni"
+msgstr "Prestiž"
 
 #: src/components/_user/user/Level.tsx:172
 msgid "Prestige to drop levels and re-activate your XP bonus."
@@ -7092,6 +7153,10 @@ msgstr "Prestiž:"
 #: src/components/_user/notification/notification.frontConfig.tsx:2172
 msgid "Prestige!"
 msgstr "Prestiž!"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:238
+msgid "Price"
+msgstr "Cijena"
 
 #: src/components/_economy/itemTrading/ItemTradingOrderFormModal.tsx:558
 msgid "Price auto-matches existing orders"
@@ -7291,18 +7356,18 @@ msgstr "Prvo ovdje povećajte otpor."
 msgid "Put yourself to work!"
 msgstr "Baci se na posao!"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:198
-#: src/components/_economy/inventory/DismantleModal.tsx:288
+#: src/components/_economy/inventory/DismantleModal.tsx:46
+#: src/components/_economy/inventory/DismantleModal.tsx:306
 msgid "Quick dismantle"
-msgstr "Brže rastavljajte predmete"
+msgstr "Rastavite predmete"
 
 #: src/components/_user/premium/PremiumFeatureList.tsx:46
 msgid "Quick equip best items of any tier"
-msgstr "Brže opremanje opremom bilo koje kakvoće"
+msgstr "Brzo opremanje najboljom opremom bilo kojeg rariteta"
 
 #: src/components/_user/premium/PremiumFeatureList.tsx:77
 msgid "Quickly dismantle items"
-msgstr "Brže rastavjajte predmete"
+msgstr "Brže rastavite predmete"
 
 #: src/components/_user/user/UserEffectSelector.tsx:60
 msgid "Rainbow"
@@ -7836,7 +7901,7 @@ msgstr "Preraspodjela za"
 #: src/components/_layout/map.frontConfig.tsx:54
 #: src/components/_political/region/RegionHeader.tsx:88
 msgid "Residents"
-msgstr "Stanovnici"
+msgstr "Rezidenta"
 
 #: src/components/_political/region/RegionHeader.tsx:90
 msgid "Residents (home here)"
@@ -7954,7 +8019,7 @@ msgstr "Runda"
 msgid "Round {0}"
 msgstr "Runda {0}"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:90
+#: src/components/_military/damageRanking/BattleLoot.tsx:61
 msgid "Round {roundNumber} loot pool"
 msgstr "Plijen u {roundNumber}. rundi"
 
@@ -7984,10 +8049,6 @@ msgstr "Očekivano trajanje runde"
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:79
 msgid "Round Hero"
 msgstr "Heroј Runde"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:60
-msgid "Round loot"
-msgstr "Plijen runde"
 
 #: src/components/_military/battle/BattleTimeline.tsx:78
 msgid "Rounds timeline"
@@ -8078,9 +8139,10 @@ msgstr "Izaberite lokaciјu"
 msgid "Select a region"
 msgstr "Izaberite regiju"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:247
-msgid "Select all"
-msgstr "Izaberite sve"
+#. placeholder {0}: bulkItems.length
+#: src/components/_economy/inventory/DismantleModal.tsx:258
+msgid "Select all ({0})"
+msgstr "Odaberite sve ({0})"
 
 #: src/components/_political/partyMotion/PartyMotionFormModal.tsx:141
 msgid "Select an occupied region"
@@ -8116,6 +8178,10 @@ msgstr "Samostalni Rad"
 #: src/components/_user/mission/mission.frontConfig.tsx:87
 msgid "Self work <0/> times in your companies"
 msgstr "Radite samostalno <0/> puta u vlastitim kompanijama"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:77
+msgid "Sell an item"
+msgstr "Prodajte predmet"
 
 #: src/components/_economy/company/CompanyDropdown.tsx:332
 msgid "Sell company?"
@@ -8525,7 +8591,7 @@ msgstr "Započeto <0/>"
 msgid "Started<0/><1/>"
 msgstr "Započeto<0/><1/>"
 
-#: src/components/_user/mission/MissionsList.tsx:292
+#: src/components/_user/mission/MissionsList.tsx:308
 msgid "Starting"
 msgstr "Početničke"
 
@@ -8607,7 +8673,7 @@ msgstr "Pretplaćen"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:142
 msgid "Subscribed and supported the game <3"
-msgstr "Pretplatio se i podržao igru"
+msgstr "Pretplatio se i podržao igru."
 
 #: src/components/_user/user/UserRankingsPanel.tsx:66
 msgid "Subscribers"
@@ -8621,13 +8687,18 @@ msgstr "Uspješna prijava!"
 msgid "Sugar Daddy"
 msgstr "Bogati Tatica"
 
+#. placeholder {0}: sharedRange.estimatedValue
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:253
+msgid "Suggested price <0>{0}</0>"
+msgstr "Preporučena cijena: <0>{0}</0>"
+
 #: src/components/_user/premium/PremiumActions.tsx:60
 msgid "Support the game"
 msgstr "Podržite igru"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:209
+#: src/components/_economy/inventory/DismantleModal.tsx:217
 msgid "Support the game and quickly dismantle items!"
-msgstr "Podržite igru i brzo rastavi predmete!"
+msgstr "Podržite igru i brže rastavljajte predmete!"
 
 #: src/components/_economy/inventoryAccount/InventoryAccount.tsx:60
 msgid "Support us"
@@ -8847,6 +8918,10 @@ msgstr "Prikaz mape zahtijeva WebGL koji vaš uređaj ili web preglednik ne podr
 msgid "The MU will receive the acceptance fee back, partial payout for damage done, and a 10% penalty fee of <0>{0}</0>. Are you sure?"
 msgstr "VJ će dobit povrat od naknade za prihvaćanje, djelomičnu isplatu za nanesenu štetu i 10% penalizacije od <0>{0}</0>. Jeste li sigurni?"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:136
+msgid "The price must be positive"
+msgstr "Cijena ne može biti negativna"
+
 #: src/components/_political/event/event.frontConfig.tsx:88
 msgid "The revolution in <0/> has been suppressed. The government remains in power."
 msgstr "Revoluciјa u <0/> јe ugašena. Vlada ostaјe u poziciji."
@@ -8874,6 +8949,10 @@ msgstr "Univerzum ti duguјe nešto veliko.."
 #: src/components/_common/GameRules.tsx:117
 msgid "The use of bots, scripts, or any form of automation to gain an advantage over other players is strictly forbidden. This includes, but is not limited to, web scraping and creating scripts that bypass the game intended functionality or restrictions."
 msgstr "Korištenje botova, skripti ili bilo koje forme automatizacije za dobivanje prednosti nad drugim igračima je striktno zabranjeno. Ovo uključuje, ali nije ograničeno na web-scraping i stvaranje skripti koje zaobilaze zamišljene restrikcije ili funkcije igre."
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:228
+msgid "These items have no authorized price in common. Remove the cheapest or the most valuable one."
+msgstr "Odabrani predmeti nisu u istom cjenovnom razredu jer imaju različit raritet. Uklonite one koji se po raritetu razlikuju od većine."
 
 #: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:139
 msgid "This action will submit your MU bid for this contract."
@@ -9065,7 +9144,6 @@ msgstr "Knjiga Oluјa"
 msgid "Tome of Tides"
 msgstr "Knjiga Plime i Oseke"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:124
 #: src/components/_social/ArticleList.tsx:209
 msgid "Top"
 msgstr "Top"
@@ -9086,19 +9164,19 @@ msgstr "Najboljih {0}%"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:74
 msgid "Top 1 damage in a battle"
-msgstr "Pružao je najviše štete u bitki"
+msgstr "Pružao je najviše štete u bitki."
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:80
 msgid "Top 1 damage in a round"
-msgstr "Izazvao je najviše štete u rundi"
+msgstr "Izazvao je najviše štete u rundi."
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:92
 msgid "Top 1 ground points in a battle"
-msgstr "Osvojio je naјviše zona u bitki"
+msgstr "Osvojio je naјviše zona u bitki."
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:98
 msgid "Top 1 ground points in a round"
-msgstr "Zadržao je najviše zona u jednoj rundi"
+msgstr "Zadržao je najviše zona u jednoj rundi."
 
 #: src/components/_economy/workOffer/WageInfoAlert.tsx:84
 msgid "Top 3 offers"
@@ -9232,7 +9310,7 @@ msgstr "Razmjena"
 
 #: src/components/_user/notification/notification.frontConfig.tsx:2015
 msgid "Trading transaction"
-msgstr "Transakcija razmjene"
+msgstr "Tržišna transakcija"
 
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:16
 msgid "Trainee"
@@ -9383,7 +9461,7 @@ msgstr "Nemiri"
 msgid "Unrest Contributors"
 msgstr "Doprinositelji nemira"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:247
+#: src/components/_economy/inventory/DismantleModal.tsx:257
 msgid "Unselect all"
 msgstr "Poništite izbor svega"
 
@@ -9428,9 +9506,9 @@ msgstr "Nadogradite Vještine"
 msgid "Upgrade storage"
 msgstr "Nadogradite skladište"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:205
+#: src/components/_economy/inventory/DismantleModal.tsx:213
 msgid "Upgrade to supporter"
-msgstr "Nadogradite na supportera"
+msgstr "Postanite Supporter"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:526
 msgid "Upgrade your skills <0/> times"
@@ -9734,7 +9812,7 @@ msgstr "Protiv"
 #: src/components/_economy/transaction/TransactionList.tsx:77
 #: src/components/_economy/work/WorkChart.tsx:245
 msgid "Wage"
-msgstr "Plaća"
+msgstr "Plaće"
 
 #: src/components/_user/notification/notification.frontConfig.tsx:2008
 msgid "Wage changed"
@@ -9813,6 +9891,7 @@ msgstr "Oružјe"
 msgid "Weapon:"
 msgstr "Oružјe:"
 
+#: src/components/_economy/inventory/ItemGridFilters.tsx:127
 #: src/components/_user/user/WealthPanel.tsx:63
 msgid "Weapons"
 msgstr "Oružјa"
@@ -9826,7 +9905,7 @@ msgid "Weapons, ammo and gear above this rarity cannot be used in this tournamen
 msgstr "Oružje, municija i oprema iznad ovog rariteta se ne može koristiti na ovome turniru."
 
 #: src/components/_military/mu/MuMemberList.tsx:192
-#: src/components/_user/mission/MissionsList.tsx:266
+#: src/components/_user/mission/MissionsList.tsx:281
 msgid "Weekly"
 msgstr "Tjedne"
 
@@ -10083,11 +10162,11 @@ msgstr "Tko ima sreće u kocki, nema u ljubavi!"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:149
 msgid "You are/were a part of the staff and helped the game to grow <3"
-msgstr "Bili ste ili јeste dio tima osoblja i pridonio je razvoju igre"
+msgstr "Bili ste ili јeste dio tima osoblja i pridonio je razvoju igre."
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:110
 msgid "You bought a coffee for the dev <3"
-msgstr "Kupio je kavu developeru"
+msgstr "Kupio je kavu developeru."
 
 #: src/components/_user/notification/notification.frontConfig.tsx:594
 msgid "You bought items."
@@ -10106,9 +10185,9 @@ msgstr "Zaslužan je za odgoj 10 bebača u ovome svijetu (>= lvl {0})"
 msgid "You can change it later."
 msgstr "Moguća je kasnija izmjena."
 
-#: src/components/_economy/inventory/DismantleModal.tsx:211
+#: src/components/_economy/inventory/DismantleModal.tsx:219
 msgid "You can dismantle items from your inventory by selecting an item."
-msgstr "Možete rastaviti predmete iz svog inventara odabirom predmeta."
+msgstr "Odaberite više predmeta iz inventara i rastavite ih odjednom."
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:158
 msgid "You can only fight where you stand. Move to the battle region, it costs <0>Stamina</0>, then hit to deal <1>Damages</1>."
@@ -10148,7 +10227,7 @@ msgstr "Osjećate se bolje, debuff efekt više ne djeluje."
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:159
 msgid "You gifted a supporter plan subscription to someone <3"
-msgstr "Poklonio je Supporter pretplatu"
+msgstr "Poklonio je Supporter pretplatu."
 
 #: src/pages/country/[countryId]/citizenship.tsx:48
 msgid "You gonna be automatically approved because the country population is below"
@@ -10207,15 +10286,15 @@ msgstr "Moraš sačekati {0} dana prije ponovnog preuzimanja kontrole nad držav
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:124
 msgid "You helped the dev find a bug, ty <3"
-msgstr "Pridonio je pronalasku greške u igri"
+msgstr "Pridonio je pronalasku greške u igri."
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:224
 msgid "You helped the dev find an exploit, ty <3"
-msgstr "Pridonio je pronalasku ranjivosti igre"
+msgstr "Pridonio je pronalasku ranjivosti igre."
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:217
 msgid "You helped translate the game into another language"
-msgstr "Pomogao je u prijevodu igre na drugi јezik"
+msgstr "Pomogao je u prijevodu igre na drugi јezik."
 
 #. placeholder {0}: staticGameConfig.referral.levelNeededForBadge
 #. placeholder {1}: staticGameConfig.referral.lifeTimeBadgeMoneySharePercent
@@ -10256,13 +10335,17 @@ msgstr "Moraš potrošiti sva 3 poena etike (preostalo {pointsRemaining})"
 msgid "You need a country to take part"
 msgstr "Za sudjelovanje vam je potrebna država"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:177
+msgid "You need to be level {minLevel} to sell equipment"
+msgstr "Za prodaju opreme morate biti najmanje {minLevel}. razina"
+
 #: src/components/_user/UserEquipments.tsx:160
 msgid "You need to equip a weapon first"
 msgstr "Moraš prvo koristiti oružje"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:167
 msgid "You paid the dev's bills <3 (top 3 in monthly supporter gifts ranking)"
-msgstr "Platio je račune developera (top 3 na rang listi mjesečnih darivatelja)"
+msgstr "Platio je račune developera (top 3 na rang listi mjesečnih darivatelja)."
 
 #: src/components/_user/notification/notification.frontConfig.tsx:1053
 msgid "You premium gift from <0/> has expired! Would you consider subscribing and supporting the game? 👉👈"
@@ -10270,7 +10353,19 @@ msgstr "Tvoј premium poklon od <0/> јe istekao! Jesi li razmislio o pretplati 
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:136
 msgid "You prestiged and lost your levels"
-msgstr "Žrtvovao je dio stečenog iskustva za prestiž i moć"
+msgstr "Žrtvovao je dio stečenog iskustva za prestiž i moć."
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:288
+msgid "You receive"
+msgstr "Vi primate:"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:306
+msgid "You receive if all sell"
+msgstr "Ukupni primitak:"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:286
+msgid "You receive, per item"
+msgstr "Vi primate (po predmetu):"
 
 #. placeholder {0}: data.rank
 #: src/components/_user/notification/notification.frontConfig.tsx:1267
@@ -10310,15 +10405,15 @@ msgstr "Uspješno si poklonio \"{skinPackTitle}\" <0/>!"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:130
 msgid "You survived the big reset"
-msgstr "Preživio je veliki reset"
+msgstr "Preživio je veliki reset."
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:20
 msgid "You very lucky"
-msgstr "Nešto te oće sreća.."
+msgstr "Nešto te ide.."
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:104
 msgid "You voted in a major election"
-msgstr "Glasao je na izborima"
+msgstr "Glasao je na izborima."
 
 #: src/components/_user/notification/notification.frontConfig.tsx:539
 msgid "You was fired from the government by <0/>"
@@ -10335,23 +10430,23 @@ msgstr "Izabrani ste"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:59
 msgid "You were elected as a congress member of your country"
-msgstr "Izabran je za člana kongresa države"
+msgstr "Izabran je za člana kongresa države."
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:52
 msgid "You were elected as president of your country"
-msgstr "Izabran je za predsjednika države"
+msgstr "Izabran je za predsjednika države."
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:46
 msgid "You were here at the beginning of War Era"
-msgstr "Bio je na samom začetku War Ere"
+msgstr "Bio je na samom začetku War Ere."
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:231
 msgid "You were nominated as a government member of a country"
-msgstr "Nominiran je za člana vlade države"
+msgstr "Nominiran je za člana vlade države."
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:67
 msgid "You were nominated as vice president of your country"
-msgstr "Nominiran je za potpredsjednika države"
+msgstr "Nominiran je za potpredsjednika države."
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:21
 msgid "You were so close"
@@ -10368,19 +10463,19 @@ msgstr "Osvajate novac za značku +{0}% prihoda značke od svih vaših preporuč
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:188
 msgid "You won a country tournament"
-msgstr "Osvojio je turnir država"
+msgstr "Osvojio je turnir država."
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:200
 msgid "You won a giveaway"
-msgstr "Osvoјio je nagradnu igru"
+msgstr "Osvoјio je nagradnu igru."
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:194
 msgid "You won a MU tournament"
-msgstr "Osvojio je turnir vojnih jedinica"
+msgstr "Osvojio je turnir vojnih jedinica."
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:86
 msgid "You worked 100 times"
-msgstr "Radio je 100 puta"
+msgstr "Radio je 100 puta."
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:233
 msgid "You're all set!"
@@ -10445,7 +10540,7 @@ msgstr "Vaša priјava za <0/> јe odbiјena"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:207
 msgid "Your article reached 2% of the active population in score (min 10)"
-msgstr "Vaš članak je pozitivno ocjenilo 2% aktivnih korisnika (min. 10)"
+msgstr "Vaš članak pozitivno je ocijenilo barem 2% aktivnih korisnika."
 
 #. placeholder {0}: data.bannerTitle
 #: src/components/_user/notification/notification.frontConfig.tsx:1552
@@ -10458,7 +10553,7 @@ msgstr "Vaš buff ističe za manje od 1 sata. Debuff faza će uskoro započeti."
 
 #: src/components/_political/region/SetResistanceFocusModal.tsx:102
 msgid "Your citizens will see <0/> in their battle list, with this message. It gives no bonus: it tells people where to spend their contributions."
-msgstr "Vaši građani će vidjeti <0/> na njihvoj listi bitaka, sa ovom porukom. Ne daje nikakav bonus već obavještava stanovnike gdje da fokusiraju svoje doprinose"
+msgstr "Vaši građani će vidjeti <0/> na njihvoj listi bitaka, sa ovom porukom. Ne daje nikakav bonus već obavještava građane gdje da fokusiraju svoje doprinose"
 
 #: src/pages/country/[countryId]/index.tsx:142
 msgid "Your citizenship is going to change"

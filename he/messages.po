@@ -78,6 +78,11 @@ msgstr "(ממוצע ההתפתחות של החבר)"
 msgid "(own development)"
 msgstr "(התפתחות עצמית)"
 
+#. placeholder {0}: Math.max(items.length, 1)
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:327
+msgid "{0, plural, one {Put on sale} other {Put # items on sale}}"
+msgstr ""
+
 #. placeholder {0}: myCountry?.name
 #: src/components/_military/battle/EndedBattlesList.tsx:81
 msgid "{0} & allies"
@@ -162,7 +167,7 @@ msgstr "{0}% מס הכנסה ינוכה משכר העובדים שלך."
 msgid "{0}% of invested"
 msgstr "{0}% מההשקעה"
 
-#: src/components/_user/mission/MissionsList.tsx:235
+#: src/components/_user/mission/MissionsList.tsx:250
 msgid "{completedCount}/{totalCount} completed"
 msgstr "{completedCount}/{totalCount} הושלם"
 
@@ -170,8 +175,16 @@ msgstr "{completedCount}/{totalCount} הושלם"
 msgid "{draftPrestigeCount} prestige point(s) on this skill ({savedPrestigeCount} saved, locked until reset)"
 msgstr "{draftPrestigeCount} נקודות פרסטיז׳ במיומנות זו ({savedPrestigeCount} נשמרו, נעולות עד לאיפוס)"
 
+#: src/components/_economy/inventory/DismantleModal.tsx:196
+msgid "{equippedCount, plural, one {# of them is equipped} other {# of them are equipped}}"
+msgstr ""
+
 #: src/components/_user/user/Level.tsx:126
 msgid "{nextLevelSkillPoints} Skill Points"
+msgstr ""
+
+#: src/components/_economy/inventory/DismantleModal.tsx:187
+msgid "{rareCount, plural, one {# of them is rare or better} other {# of them are rare or better}}"
 msgstr ""
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:167
@@ -199,6 +212,14 @@ msgstr "{savedPrestigeCount} נקודות פרסטיז׳ פעילות במיומ
 #: src/components/_military/battle/RoundScore.tsx:50
 msgid "{score}/{0} Rounds"
 msgstr "{score}/{0} סיבובים"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:178
+msgid "{selectedCount, plural, one {Dismantle # item for} other {Dismantle # items for}}"
+msgstr ""
+
+#: src/components/_economy/inventory/DismantleModal.tsx:283
+msgid "{selectedCount} selected"
+msgstr ""
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:79
 msgid "{value} km"
@@ -805,14 +826,14 @@ msgid "<0>Emotes</0> in chat"
 msgstr "<0>Emotes</0> בצ׳אט"
 
 #. placeholder {0}: ts.case2
-#: src/components/_military/damageRanking/BattleLoot.tsx:62
-msgid "<0>Every <1/> damage dealt in this round across both sides rolls an <2>{0}</2> into the round loot pool.</0><3>Round loot are distributed at the end of the round, top 1 damage dealer get top 1 item and so on...</3>"
-msgstr "<0>כל נזק של <1/> שנגרם בסיבוב הזה על פני שני הצדדים מגלגל <2>{0}</2> למאגר שלל הסיבוב.</0><3>שלל הסיבוב מתחלק בסיום הסיבוב: מי שגרם לנזק הגבוה ביותר מקבל את הפריט הטוב ביותר, וכן הלאה...</3>"
+#: src/components/_military/damageRanking/BattleLoot.tsx:64
+msgid "<0>Every <1/> damage dealt in this round across both sides rolls an <2>{0}</2> into the round loot pool.</0><3>The pool is handed out at the end of the round: the top damage dealer gets the most valuable item, #2 the next one, and so on. The item you are in line for is shown on your row in the ranking below.</3>"
+msgstr ""
 
 #. placeholder {0}: ts.case2
-#: src/components/_military/damageRanking/BattleLoot.tsx:75
-msgid "<0>Every <1/> total damage dealt across both sides rolls an <2>{0}</2> into the battle loot pool.</0><3>Battle loot are distributed at the end of the battle, top 1 damage dealer get top 1 item and so on...</3>"
-msgstr "<0>כל נזק כולל של <1/> שנגרם לשני הצדדים מגלגל <2>{0}</2> למאגר שלל הקרב.</0><3>שלל הקרב מתחלק בסיום הקרב: מי שגרם לנזק הגבוה ביותר מקבל את הפריט הטוב ביותר, וכן הלאה...</3>"
+#: src/components/_military/damageRanking/BattleLoot.tsx:79
+msgid "<0>Every <1/> total damage dealt across both sides rolls an <2>{0}</2> into the battle loot pool.</0><3>The pool is handed out at the end of the battle: the top damage dealer gets the most valuable item, #2 the next one, and so on. The item you are in line for is shown on your row in the ranking below.</3>"
+msgstr ""
 
 #. placeholder {0}: 1
 #. placeholder {1}: worker.fidelity
@@ -1470,6 +1491,8 @@ msgstr "מכנסיים מתקדמים"
 msgid "Agrarian"
 msgstr "חקלאי"
 
+#: src/components/_economy/inventory/ItemGridFilters.tsx:119
+#: src/components/_economy/inventory/ItemGridFilters.tsx:147
 #: src/components/_military/battle/ActiveBattlesList.tsx:134
 #: src/components/_military/battle/EndedBattlesList.tsx:78
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:79
@@ -1578,6 +1601,12 @@ msgstr "שם הברית"
 #: src/components/_military/battle/ActiveBattlesList.tsx:155
 msgid "Allies"
 msgstr "בעלות ברית"
+
+#. placeholder {0}: sharedRange.min
+#. placeholder {1}: sharedRange.max
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:139
+msgid "Allowed between {0} and {1}"
+msgstr ""
 
 #: src/components/_economy/workOffer/WageInfoAlert.tsx:48
 msgid "Allowed wage range:"
@@ -1964,7 +1993,7 @@ msgstr "מנוע אוטומטי"
 msgid "Available in"
 msgstr ""
 
-#: src/components/_user/mission/MissionsList.tsx:322
+#: src/components/_user/mission/MissionsList.tsx:339
 msgid "Available now"
 msgstr ""
 
@@ -2099,11 +2128,7 @@ msgstr "קרב על {regionName} {score}"
 msgid "Battle Hero"
 msgstr "גיבור קרב"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:60
-msgid "Battle loot"
-msgstr "שלל קרב"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:90
+#: src/components/_military/damageRanking/BattleLoot.tsx:61
 msgid "Battle loot pool"
 msgstr "בריכת שלל קרב"
 
@@ -2629,6 +2654,11 @@ msgstr "נלקח"
 msgid "Claimed so far"
 msgstr ""
 
+#: src/components/_economy/inventory/DismantleModal.tsx:294
+#: src/components/_economy/inventory/ItemSelectorModal.tsx:166
+msgid "Clear"
+msgstr ""
+
 #: src/components/_political/country/CountrySelectV2.tsx:278
 msgid "Clear selection"
 msgstr "נקה בחירה"
@@ -2670,7 +2700,7 @@ msgstr "לחץ כדי לבחור הצעה"
 msgid "Climate"
 msgstr "אקלים"
 
-#: ../__ui/src/components/Modal/Modal.tsx:302
+#: ../__ui/src/components/Modal/Modal.tsx:316
 #: src/components/_political/map/MapMenu.tsx:247
 msgid "Close"
 msgstr "לסגור"
@@ -3234,7 +3264,7 @@ msgstr "גופן שם משתמש מותאם אישית"
 msgid "d. Any form of discrimination, racism, xenophobia, antisemitism, homophobia, transphobia and hate speech"
 msgstr "ד. כל צורה של אפליה, גזענות, שנאת זרים, אנטישמיות, הומופוביה, טרנספוביה ודיבורי שטנה"
 
-#: src/components/_user/mission/MissionsList.tsx:253
+#: src/components/_user/mission/MissionsList.tsx:268
 msgid "Daily"
 msgstr "יומי"
 
@@ -3634,6 +3664,10 @@ msgstr ""
 msgid "Dismantle Item"
 msgstr "לפרק פריט"
 
+#: src/components/_economy/inventory/DismantleModal.tsx:175
+msgid "Dismantle items"
+msgstr ""
+
 #: src/components/_user/apiToken/ApiTokenList.tsx:153
 msgid "Dismiss"
 msgstr "בטל"
@@ -3647,7 +3681,7 @@ msgstr "פרק ברית"
 msgid "Dissolve the alliance permanently, removing every member country."
 msgstr "פרק את הברית לצמיתות, תוך הסרת כל מדינות החברות."
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:97
+#: src/components/_military/damageRanking/BattleLoot.tsx:103
 msgid "Distributed"
 msgstr "מופץ"
 
@@ -3721,6 +3755,10 @@ msgstr "דרקון"
 #: src/components/_common/GameRules.tsx:262
 msgid "e. Content about ongoing real-world wars and armed conflicts (most notably the Russo-Ukrainian war and the Israeli–Palestinian conflict)"
 msgstr "ה. תוכן על מלחמות מתמשכות בעולם האמיתי וסכסוכים מזוינים (בעיקר מלחמת רוסיה-אוקראינה והסכסוך הישראלי-פלסטיני)"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:211
+msgid "Each item gets its own offer, all at the same price."
+msgstr ""
 
 #: src/components/_user/user/SkillUpgrade.tsx:293
 msgid "Each prestige point gives the equivalent of {skillBonusLevels} level of the selected skill"
@@ -3918,6 +3956,10 @@ msgstr "אנרגיה"
 msgid "Ensign"
 msgstr "אנסיין"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:133
+msgid "Enter a price"
+msgstr ""
+
 #: src/components/_political/law/LawFormModal.tsx:244
 msgid "Enter article ID"
 msgstr "הזן מזהה מאמר"
@@ -3933,6 +3975,7 @@ msgid "Entrepreneurship"
 msgstr "יזמות"
 
 #: src/components/_economy/inventory/case/RarityChances.tsx:56
+#: src/components/_economy/inventory/ItemGridFilters.tsx:135
 #: src/components/_layout/LayoutOptions.tsx:232
 #: src/components/_user/user/WealthPanel.tsx:56
 #: src/pages/market/index.tsx:81
@@ -3949,6 +3992,10 @@ msgstr "ציוד:"
 #: src/components/_economy/market/MarketHeader.tsx:20
 msgid "Equipments"
 msgstr "ציוד"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:246
+msgid "Equipped items are left out of select all."
+msgstr ""
 
 #: src/components/_political/law/GenericLawStatus.tsx:44
 msgid "Error"
@@ -4394,7 +4441,7 @@ msgstr ""
 msgid "General"
 msgstr "גנרל"
 
-#: src/components/_user/mission/MissionsList.tsx:334
+#: src/components/_user/mission/MissionsList.tsx:351
 msgid "Generate Missions"
 msgstr "צור משימות"
 
@@ -4411,7 +4458,7 @@ msgstr "קבל <0>סקין מנוי</0> בלעדי!"
 msgid "Get multiple skins at once with a 30% discount!"
 msgstr "קבל מספר סקינים בבת אחת עם 30% הנחה!"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:221
+#: src/components/_economy/inventory/DismantleModal.tsx:230
 msgid "Get supporter plan"
 msgstr "קבל תוכנית תומכים"
 
@@ -4962,6 +5009,7 @@ msgstr "פריט נקנה"
 msgid "Item Market"
 msgstr "שוק פריטים"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:191
 #: src/components/_user/user/WealthPanel.tsx:49
 msgid "Items"
 msgstr "פריטים"
@@ -5107,10 +5155,6 @@ msgstr ""
 #: src/components/_user/auth/WelcomeModal.tsx:152
 msgid "Language"
 msgstr "שפה"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:116
-msgid "Last"
-msgstr "אחרון"
 
 #: src/components/_user/user/UserHeader.tsx:358
 msgid "Last connection"
@@ -5336,6 +5380,10 @@ msgstr "מוגבל:"
 msgid "Line"
 msgstr "קו"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:297
+msgid "Listed at, taxes included"
+msgstr ""
+
 #: src/utils/translations.tsx:72
 msgid "Little cuties used to make steaks :("
 msgstr "חמודים קטנים נהגו להכין סטייקים :("
@@ -5406,10 +5454,6 @@ msgstr "סיכוי שלל"
 #: src/components/_user/notification/notification.frontConfig.tsx:2086
 msgid "Loot reward"
 msgstr "גמול שלל"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:130
-msgid "Loots"
-msgstr "שלל"
 
 #: src/components/_other/shop/skin.frontConfig.tsx:23
 msgid "Love Paper Jet"
@@ -5482,6 +5526,10 @@ msgstr "סמלי מפה"
 #: src/pages/user/[userId]/account.tsx:26
 msgid "Market"
 msgstr "שוק"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:205
+msgid "Market average"
+msgstr ""
 
 #: src/components/_political/country/CountryTaxes.tsx:24
 #: src/components/_political/law/LawFormModal.tsx:258
@@ -5812,7 +5860,7 @@ msgid "Mission tags"
 msgstr "תגיות משימות"
 
 #: src/components/_user/mission/MissionsHeader.tsx:56
-#: src/components/_user/mission/MissionsList.tsx:232
+#: src/components/_user/mission/MissionsList.tsx:247
 #: src/components/_user/user/UserHeader.tsx:225
 msgid "Missions"
 msgstr "משימות"
@@ -5855,7 +5903,7 @@ msgid "Money Won"
 msgstr "כסף שהתקבל"
 
 #: src/components/_military/mu/MuMemberList.tsx:191
-#: src/components/_user/mission/MissionsList.tsx:279
+#: src/components/_user/mission/MissionsList.tsx:294
 msgid "Monthly"
 msgstr "חודשי"
 
@@ -5863,7 +5911,7 @@ msgstr "חודשי"
 msgid "Monthly damages: <0>{monthlyDamages}</0>"
 msgstr "נזקים חודשיים: <0>{monthlyDamages}</0>"
 
-#: src/components/_user/mission/MissionsList.tsx:311
+#: src/components/_user/mission/MissionsList.tsx:328
 msgid "Monthly missions are not available yet"
 msgstr ""
 
@@ -6325,6 +6373,11 @@ msgstr "עדיין אין דירוג קרקע."
 msgid "No home region set"
 msgstr ""
 
+#: src/components/_economy/inventory/DismantleModal.tsx:263
+#: src/components/_economy/inventory/ItemSelectorModal.tsx:198
+msgid "No items found"
+msgstr ""
+
 #: src/components/_user/kits/KitsPopover.tsx:130
 msgid "No kits yet - add one to quick-equip a full loadout."
 msgstr "אין עדיין ערכות - הוסף אחת כדי לצייד ערכה מלאה במהירות."
@@ -6362,7 +6415,7 @@ msgstr ""
 msgid "No military units found"
 msgstr "לא נמצאו יחידות צבאיות"
 
-#: src/components/_user/mission/MissionsList.tsx:313
+#: src/components/_user/mission/MissionsList.tsx:330
 msgid "No missions available"
 msgstr "אין משימות זמינות"
 
@@ -6434,6 +6487,10 @@ msgstr "לא נמצאו עסקאות"
 #: src/pages/country/[countryId]/wars.tsx:32
 msgid "No wars found"
 msgstr "לא נמצאו מלחמות"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:239
+msgid "No weapons or equipment to dismantle"
+msgstr ""
 
 #: src/components/_economy/workOffer/WorkOfferList.tsx:182
 msgid "No work offers"
@@ -6940,6 +6997,10 @@ msgstr "נדרש אימות טלפוני"
 msgid "Pick a fight!"
 msgstr "בחר קרב!"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:217
+msgid "Pick up to {maxItemsPerListing} weapons or equipment in perfect condition to sell at the same price."
+msgstr ""
+
 #: src/utils/translations.tsx:117
 msgid "Pill"
 msgstr "כדור"
@@ -7093,6 +7154,10 @@ msgstr "פרסטיז׳:"
 #: src/components/_user/notification/notification.frontConfig.tsx:2172
 msgid "Prestige!"
 msgstr "פרסטיז׳!"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:238
+msgid "Price"
+msgstr ""
 
 #: src/components/_economy/itemTrading/ItemTradingOrderFormModal.tsx:558
 msgid "Price auto-matches existing orders"
@@ -7292,8 +7357,8 @@ msgstr ""
 msgid "Put yourself to work!"
 msgstr "שים את עצמך לעבודה!"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:198
-#: src/components/_economy/inventory/DismantleModal.tsx:288
+#: src/components/_economy/inventory/DismantleModal.tsx:46
+#: src/components/_economy/inventory/DismantleModal.tsx:306
 msgid "Quick dismantle"
 msgstr "פירוק מהיר"
 
@@ -7955,7 +8020,7 @@ msgstr "סיבוב"
 msgid "Round {0}"
 msgstr "סיבוב {0}"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:90
+#: src/components/_military/damageRanking/BattleLoot.tsx:61
 msgid "Round {roundNumber} loot pool"
 msgstr "בריכת השלל של סיבוב {roundNumber}"
 
@@ -7985,10 +8050,6 @@ msgstr "ETA לסיבוב"
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:79
 msgid "Round Hero"
 msgstr "גיבור הסיבוב"
-
-#: src/components/_military/damageRanking/BattleLoot.tsx:60
-msgid "Round loot"
-msgstr "שלל הסיבוב"
 
 #: src/components/_military/battle/BattleTimeline.tsx:78
 msgid "Rounds timeline"
@@ -8079,9 +8140,10 @@ msgstr "בחר מיקום"
 msgid "Select a region"
 msgstr "בחר אזור"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:247
-msgid "Select all"
-msgstr "בחר הכל"
+#. placeholder {0}: bulkItems.length
+#: src/components/_economy/inventory/DismantleModal.tsx:258
+msgid "Select all ({0})"
+msgstr ""
 
 #: src/components/_political/partyMotion/PartyMotionFormModal.tsx:141
 msgid "Select an occupied region"
@@ -8116,6 +8178,10 @@ msgstr "עבודה עצמית"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:87
 msgid "Self work <0/> times in your companies"
+msgstr ""
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:77
+msgid "Sell an item"
 msgstr ""
 
 #: src/components/_economy/company/CompanyDropdown.tsx:332
@@ -8526,7 +8592,7 @@ msgstr "התחיל <0/>"
 msgid "Started<0/><1/>"
 msgstr "התחיל<0/><1/>"
 
-#: src/components/_user/mission/MissionsList.tsx:292
+#: src/components/_user/mission/MissionsList.tsx:308
 msgid "Starting"
 msgstr "מתחיל"
 
@@ -8622,11 +8688,16 @@ msgstr "התחבר בהצלחה!"
 msgid "Sugar Daddy"
 msgstr "מאהב זקן"
 
+#. placeholder {0}: sharedRange.estimatedValue
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:253
+msgid "Suggested price <0>{0}</0>"
+msgstr ""
+
 #: src/components/_user/premium/PremiumActions.tsx:60
 msgid "Support the game"
 msgstr "תמכו במשחק"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:209
+#: src/components/_economy/inventory/DismantleModal.tsx:217
 msgid "Support the game and quickly dismantle items!"
 msgstr "תמכו במשחק ופרקו במהירות פריטים!"
 
@@ -8848,6 +8919,10 @@ msgstr ""
 msgid "The MU will receive the acceptance fee back, partial payout for damage done, and a 10% penalty fee of <0>{0}</0>. Are you sure?"
 msgstr "ה-MU תקבל בחזרה את דמי הקבלה, תשלום חלקי עבור נזק שנגרם ועמלת קנס של 10% בסך <0>{0}</0>. אתה בטוח?"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:136
+msgid "The price must be positive"
+msgstr ""
+
 #: src/components/_political/event/event.frontConfig.tsx:88
 msgid "The revolution in <0/> has been suppressed. The government remains in power."
 msgstr "המהפכה ב-<0/> דוכאה. הממשלה נשארת בשלטון."
@@ -8875,6 +8950,10 @@ msgstr "היקום חייב לך משהו גדול"
 #: src/components/_common/GameRules.tsx:117
 msgid "The use of bots, scripts, or any form of automation to gain an advantage over other players is strictly forbidden. This includes, but is not limited to, web scraping and creating scripts that bypass the game intended functionality or restrictions."
 msgstr "השימוש בבוטים, סקריפטים או כל צורה של אוטומציה כדי להשיג יתרון על פני שחקנים אחרים אסור בהחלט. זה כולל, אך לא מוגבל, גירוד אינטרנט ויצירת סקריפטים שעוקפים את הפונקציונליות או ההגבלות המיועדות למשחק."
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:228
+msgid "These items have no authorized price in common. Remove the cheapest or the most valuable one."
+msgstr ""
 
 #: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:139
 msgid "This action will submit your MU bid for this contract."
@@ -9066,7 +9145,6 @@ msgstr "כרך הסערות"
 msgid "Tome of Tides"
 msgstr "כרך הגאות"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:124
 #: src/components/_social/ArticleList.tsx:209
 msgid "Top"
 msgstr "מוביל"
@@ -9384,7 +9462,7 @@ msgstr "אי שקט"
 msgid "Unrest Contributors"
 msgstr "תורמים לתסיסה"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:247
+#: src/components/_economy/inventory/DismantleModal.tsx:257
 msgid "Unselect all"
 msgstr "בטל את הבחירה בכולם"
 
@@ -9429,7 +9507,7 @@ msgstr "שדרוג מיומנויות"
 msgid "Upgrade storage"
 msgstr "שדרג אחסון"
 
-#: src/components/_economy/inventory/DismantleModal.tsx:205
+#: src/components/_economy/inventory/DismantleModal.tsx:213
 msgid "Upgrade to supporter"
 msgstr "שדרג לתומך"
 
@@ -9814,6 +9892,7 @@ msgstr "נשק"
 msgid "Weapon:"
 msgstr "נשק:"
 
+#: src/components/_economy/inventory/ItemGridFilters.tsx:127
 #: src/components/_user/user/WealthPanel.tsx:63
 msgid "Weapons"
 msgstr "כלי נשק"
@@ -9827,7 +9906,7 @@ msgid "Weapons, ammo and gear above this rarity cannot be used in this tournamen
 msgstr ""
 
 #: src/components/_military/mu/MuMemberList.tsx:192
-#: src/components/_user/mission/MissionsList.tsx:266
+#: src/components/_user/mission/MissionsList.tsx:281
 msgid "Weekly"
 msgstr "שבועי"
 
@@ -10107,7 +10186,7 @@ msgstr "הבאת 10 תינוקות לעולם (>= רמה {0})"
 msgid "You can change it later."
 msgstr "תוכל לשנות זאת מאוחר יותר."
 
-#: src/components/_economy/inventory/DismantleModal.tsx:211
+#: src/components/_economy/inventory/DismantleModal.tsx:219
 msgid "You can dismantle items from your inventory by selecting an item."
 msgstr "אתה יכול לפרק פריטים מהמלאי שלך על ידי בחירת פריט."
 
@@ -10257,6 +10336,10 @@ msgstr "עליך להוציא את כל 3 נקודות האתיקה ({pointsRema
 msgid "You need a country to take part"
 msgstr "אתה צריך מדינה כדי להשתתף"
 
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:177
+msgid "You need to be level {minLevel} to sell equipment"
+msgstr ""
+
 #: src/components/_user/UserEquipments.tsx:160
 msgid "You need to equip a weapon first"
 msgstr "אתה צריך לצייד נשק קודם"
@@ -10272,6 +10355,18 @@ msgstr "פג תוקף מתנת הפרימיום שלך מ-<0/>! האם היית 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:136
 msgid "You prestiged and lost your levels"
 msgstr "ביצעת פרסטיז׳ ואיבדת את הרמות שלך"
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:288
+msgid "You receive"
+msgstr ""
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:306
+msgid "You receive if all sell"
+msgstr ""
+
+#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:286
+msgid "You receive, per item"
+msgstr ""
 
 #. placeholder {0}: data.rank
 #: src/components/_user/notification/notification.frontConfig.tsx:1267
